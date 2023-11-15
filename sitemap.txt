@@ -1,8 +1,5 @@
 http://xiao10ma.github.io/2023/11/15/my-first-blog/
-http://xiao10ma.github.io/2023/11/15/package/
-http://xiao10ma.github.io/1985/10/26/node_modules/hexo-deployer-git/package/
 http://xiao10ma.github.io/2023/11/15/hello-world/
-http://xiao10ma.github.io/1985/10/26/node_modules/hexo-deployer-git/README/
 http://xiao10ma.github.io/
 http://xiao10ma.github.io/tags/%E6%97%A5%E8%AE%B0/
 http://xiao10ma.github.io/categories/%E6%97%A5%E8%AE%B0/

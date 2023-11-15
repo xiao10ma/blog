@@ -6,7 +6,7 @@
   <link href="http://xiao10ma.github.io/atom.xml" rel="self"/>
   
   <link href="http://xiao10ma.github.io/"/>
-  <updated>2023-11-15T12:40:36.525Z</updated>
+  <updated>2023-11-15T14:43:36.745Z</updated>
   <id>http://xiao10ma.github.io/</id>
   
   <author>
@@ -15,26 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://xiao10ma.github.io/2023/11/15/package/"/>
-    <id>http://xiao10ma.github.io/2023/11/15/package/</id>
-    <published>2023-11-15T12:40:36.525Z</published>
-    <updated>2023-11-15T12:40:36.525Z</updated>
-    
-    <content type="html"><![CDATA[{"dependencies":{"hexo-deployer-git":"^4.0.0"}}]]></content>
-    
-    
-      
-      
-    <summary type="html">{&quot;dependencies&quot;:{&quot;hexo-deployer-git&quot;:&quot;^4.0.0&quot;}}</summary>
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>my first blog</title>
@@ -73,117 +53,6 @@
       
       
     <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://xiao10ma.github.io/1985/10/26/node_modules/hexo-deployer-git/README/"/>
-    <id>http://xiao10ma.github.io/1985/10/26/node_modules/hexo-deployer-git/README/</id>
-    <published>1985-10-26T08:15:00.000Z</published>
-    <updated>1985-10-26T08:15:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="hexo-deployer-git"><a href="#hexo-deployer-git" class="headerlink" title="hexo-deployer-git"></a>hexo-deployer-git</h1><p><a href="https://github.com/hexojs/hexo-deployer-git/actions?query=workflow:Tester"><img src="https://github.com/hexojs/hexo-deployer-git/workflows/Tester/badge.svg" alt="Build Status"></a><br><a href="https://www.npmjs.com/package/hexo-deployer-git"><img src="https://badge.fury.io/js/hexo-deployer-git.svg" alt="NPM version"></a><br><a href="https://coveralls.io/r/hexojs/hexo-deployer-git?branch=master"><img src="https://img.shields.io/coveralls/hexojs/hexo-deployer-git.svg" alt="Coverage Status"></a></p><p>Git deployer plugin for <a href="https://hexo.io/">Hexo</a>.</p><h2 id="Notice-Fatal-HttpRequestException-Error-on-pushing-to-GitHub"><a href="#Notice-Fatal-HttpRequestException-Error-on-pushing-to-GitHub" class="headerlink" title="Notice: Fatal HttpRequestException Error on pushing to GitHub?"></a>Notice: Fatal HttpRequestException Error on pushing to GitHub?</h2><p>Update <a href="https://github.com/git-for-windows/git/releases">Git for Windows</a> to the latest version. (<a href="https://github.com/Microsoft/Git-Credential-Manager-for-Windows#notice-experiencing-github-pushfetch-problems">Details</a>)</p><h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><h2 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h2><p>You can configure this plugin in <code>_config.yml</code>.</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># You can use this:</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span></span><br><span class="line">  <span class="attr">branch:</span> [<span class="string">branch</span>]</span><br><span class="line">  <span class="attr">token:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="attr">message:</span> [<span class="string">message</span>]</span><br><span class="line">  <span class="attr">name:</span> [<span class="string">git</span> <span class="string">user</span>]</span><br><span class="line">  <span class="attr">email:</span> [<span class="string">git</span> <span class="string">email</span>]</span><br><span class="line">  <span class="attr">extend_dirs:</span> [<span class="string">extend</span> <span class="string">directory</span>]</span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">false</span> <span class="comment"># default is true</span></span><br><span class="line">  <span class="attr">ignore_pattern:</span> <span class="string">regexp</span>  <span class="comment"># whatever file that matches the regexp will be ignored when deploying</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># or this:</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">message:</span> [<span class="string">message</span>]</span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;[,branch]</span></span><br><span class="line">  <span class="attr">extend_dirs:</span></span><br><span class="line">    <span class="bullet">-</span> [<span class="string">extend</span> <span class="string">directory</span>]</span><br><span class="line">    <span class="bullet">-</span> [<span class="string">another</span> <span class="string">extend</span> <span class="string">directory</span>]</span><br><span class="line">  <span class="attr">ignore_hidden:</span></span><br><span class="line">    <span class="attr">public:</span> <span class="literal">false</span></span><br><span class="line">    [<span class="string">extend</span> <span class="string">directory</span>]<span class="string">:</span> <span class="literal">true</span></span><br><span class="line">    [<span class="string">another</span> <span class="string">extend</span> <span class="string">directory</span>]<span class="string">:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">ignore_pattern:</span></span><br><span class="line">    [<span class="string">folder</span>]<span class="string">:</span> <span class="string">regexp</span>  <span class="comment"># or you could specify the ignore_pattern under a certain directory</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Multiple repositories</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">repo:</span></span><br><span class="line">    <span class="comment"># Either syntax is supported</span></span><br><span class="line">    [<span class="string">repo_name</span>]<span class="string">:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;[,branch]</span></span><br><span class="line">    [<span class="string">repo_name</span>]<span class="string">:</span></span><br><span class="line">      <span class="attr">url:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span></span><br><span class="line">      <span class="attr">branch:</span> [<span class="string">branch</span>]</span><br></pre></td></tr></table></figure><ul><li><strong>repo</strong>: Repository settings, or plain url of your repo<ul><li><strong>url</strong>: Url of your repositury to pull from and push to.</li><li><strong>branch</strong>: Optional git branch to deploy the static site to.<ul><li>Defaults to <code>gh-pages</code> on GitHub.</li><li>Defaults to <code>coding-pages</code> on Coding.net.</li><li>Otherwise defaults to <code>master</code>.</li></ul></li><li><strong>token</strong>: Optional token value to authenticate with the repo. Prefix with <code>$</code> to read token from environment variable (recommended). Repo must be a http(s) url. <a href="#deploy-with-token">More details</a>.</li><li><strong>repo_name</strong>: Unique name when deploying to multiple repositories.<ul><li>Example:<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">repo:</span></span><br><span class="line">    <span class="comment"># Either syntax is supported</span></span><br><span class="line">    <span class="attr">github:</span> <span class="string">https://github.com/user/project.git,branch</span></span><br><span class="line">    <span class="attr">gitee:</span></span><br><span class="line">      <span class="attr">url:</span> <span class="string">https://gitee.com/user/project.git</span></span><br><span class="line">      <span class="attr">branch:</span> <span class="string">branch_name</span></span><br></pre></td></tr></table></figure></li></ul></li></ul></li><li><strong>branch</strong>: Git branch to deploy the static site to. Branch name specified in <code>repo:</code> takes priority.</li><li><strong>message</strong>: Commit message. Defaults to <code>Site updated: &#123;&#123; now("yyyy-MM-dd HH:mm:ss") &#125;&#125;</code>.</li><li><strong>name</strong> and <strong>email</strong>: User info for committing the change, overrides global config. This info is independent of git login.</li><li><strong>extend_dirs</strong>: Additional directories to publish. e.g <code>demo</code>, <code>examples</code></li><li><strong>ignore_hidden</strong> (Boolean|Object): whether ignore hidden files to publish. GitHub requires the <code>.nojekyll</code> in root.<ul><li>Boolean: for all dirs.</li><li>Object: for public dir and extend dir:<ul><li><code>public</code>: the public dir defaults.</li><li>[extend directory]</li></ul></li></ul></li><li><strong>ignore_pattern</strong> (Object|RegExp): Choose the ignore pattern when deploying<ul><li>RegExp: for all dirs.</li><li>Object: specify the ignore pattern under certain directory. For example, if you want to push the source files and generated files at the same time to two different branches. The option should be like<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># _config.yaml</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">    <span class="attr">repo:</span> <span class="string">git@github.com:&lt;username&gt;/&lt;username&gt;.github.io.git</span></span><br><span class="line">    <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">    <span class="attr">repo:</span> <span class="string">git@github.com:&lt;username&gt;/&lt;username&gt;.github.io.git</span></span><br><span class="line">    <span class="attr">branch:</span> <span class="string">src</span></span><br><span class="line">    <span class="attr">extend_dirs:</span> <span class="string">/</span></span><br><span class="line">    <span class="attr">ignore_hidden:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">ignore_pattern:</span></span><br><span class="line">        <span class="attr">public:</span> <span class="string">.</span></span><br></pre></td></tr></table></figure></li></ul></li></ul><h3 id="Deploy-with-token"><a href="#Deploy-with-token" class="headerlink" title="Deploy with token"></a>Deploy with token</h3><p>While this plugin can parse authentication token from the config, only use this method if you are sure the config will not be committed, including to a private repo. A more secure approach is to add it to the CI as an environment variable, then simply add the name of the environment variable to this plugin’s config (e.g. <code>$GITHUB_TOKEN</code>).</p><p>Additional guides:</p><ul><li>Create a GitHub Personal Access Token. <a href="https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line">[Link]</a></li><li>Add authentication token to Travis CI. <a href="https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings">[Link]</a></li></ul><h2 id="How-it-works"><a href="#How-it-works" class="headerlink" title="How it works"></a>How it works</h2><p><code>hexo-deployer-git</code> works by generating the site in <code>.deploy_git</code> and <em>force pushing</em> to the repo(es) in config.<br>If <code>.deploy_git</code> does not exist, a repo will initialized (<code>git init</code>).<br>Otherwise the curent repo (with its commit history) will be used.</p><p>Users can clone the deployed repo to <code>.deploy_git</code> to keep the commit history.</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone &lt;gh-pages repo&gt; .deploy_git</span><br></pre></td></tr></table></figure><h2 id="Reset"><a href="#Reset" class="headerlink" title="Reset"></a>Reset</h2><p>Remove <code>.deploy_git</code> folder.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">rm</span> -rf .deploy_git</span><br></pre></td></tr></table></figure><h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>MIT</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;hexo-deployer-git&quot;&gt;&lt;a href=&quot;#hexo-deployer-git&quot; class=&quot;headerlink&quot; title=&quot;hexo-deployer-git&quot;&gt;&lt;/a&gt;hexo-deployer-git&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;h</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://xiao10ma.github.io/1985/10/26/node_modules/hexo-deployer-git/index/"/>
-    <id>http://xiao10ma.github.io/1985/10/26/node_modules/hexo-deployer-git/index/</id>
-    <published>1985-10-26T08:15:00.000Z</published>
-    <updated>1985-10-26T08:15:00.000Z</updated>
-    
-    <content type="html"><![CDATA[/* global hexo */'use strict';hexo.extend.deployer.register('git', require('./lib/deployer'));]]></content>
-    
-    
-      
-      
-    <summary type="html">/* global hexo */
-&#39;use strict&#39;;
-
-hexo.extend.deployer.register(&#39;git&#39;, require(&#39;./lib/deployer&#39;));
-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://xiao10ma.github.io/1985/10/26/node_modules/hexo-deployer-git/package/"/>
-    <id>http://xiao10ma.github.io/1985/10/26/node_modules/hexo-deployer-git/package/</id>
-    <published>1985-10-26T08:15:00.000Z</published>
-    <updated>2023-11-15T12:40:32.600Z</updated>
-    
-    <content type="html"><![CDATA[{"name":"hexo-deployer-git","version":"4.0.0","description":"Git deployer plugin of Hexo.","main":"index.js","scripts":{"eslint":"eslint .","test":"mocha test/index.js","test-cov":"c8 --reporter=lcovonly npm run test"},"directories":{"lib":"./lib"},"files":["lib/","index.js"],"repository":"hexojs/hexo-deployer-git","homepage":"https://hexo.io/","keywords":["hexo","git","deploy","deployer"],"author":"Tommy Chen <tommy351@gmail.com> (https://zespia.tw)","maintainers":["Abner Chou <hi@abnerchou.me> (https://abnerchou.me)"],"license":"MIT","devDependencies":{"c8":"^7.12.0","chai":"^4.3.6","eslint":"^8.24.0","eslint-config-hexo":"^5.0.0","mocha":"^10.0.0"},"dependencies":{"bluebird":"^3.7.2","hexo-fs":"^4.0.0","hexo-util":"^2.7.0","luxon":"^3.0.4","nunjucks":"^3.2.3","picocolors":"^1.0.0"},"engines":{"node":">=14"},"__npminstall_done":true,"_from":"hexo-deployer-git@4.0.0","_resolved":"https://registry.npmmirror.com/hexo-deployer-git/-/hexo-deployer-git-4.0.0.tgz"}]]></content>
-    
-    
-      
-      
-    <summary type="html">{&quot;name&quot;:&quot;hexo-deployer-git&quot;,&quot;version&quot;:&quot;4.0.0&quot;,&quot;description&quot;:&quot;Git deployer plugin of Hexo.&quot;,&quot;main&quot;:&quot;index.js&quot;,&quot;scripts&quot;:{&quot;eslint&quot;:&quot;eslint .&quot;,</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://xiao10ma.github.io/1985/10/26/node_modules/hexo-deployer-git/lib/deployer/"/>
-    <id>http://xiao10ma.github.io/1985/10/26/node_modules/hexo-deployer-git/lib/deployer/</id>
-    <published>1985-10-26T08:15:00.000Z</published>
-    <updated>1985-10-26T08:15:00.000Z</updated>
-    
-    <content type="html"><![CDATA['use strict';const pathFn = require('path');const fs = require('hexo-fs');const { underline } = require('picocolors');const nunjucks = require('nunjucks');const { DateTime } = require('luxon');const Promise = require('bluebird');const { spawn } = require('hexo-util');const parseConfig = require('./parse_config');const swigHelpers = {  now: function(format) {    return DateTime.now().toFormat(format);  }};module.exports = function(args) {  const baseDir = this.base_dir;  const deployDir = pathFn.join(baseDir, '.deploy_git');  const publicDir = this.public_dir;  let extendDirs = args.extend_dirs;  const ignoreHidden = args.ignore_hidden;  const ignorePattern = args.ignore_pattern;  const log = this.log;  const message = commitMessage(args);  const verbose = !args.silent;  if (!args.repo && process.env.HEXO_DEPLOYER_REPO) {    args.repo = process.env.HEXO_DEPLOYER_REPO;  }  if (!args.repo && !args.repository) {    let help = '';    help += 'You have to configure the deployment settings in _config.yml first!\n\n';    help += 'Example:\n';    help += '  deploy:\n';    help += '    type: git\n';    help += '    repo: <repository url>\n';    help += '    branch: [branch]\n';    help += '    message: [message]\n\n';    help += '    extend_dirs: [extend directory]\n\n';    help += 'For more help, you can check the docs: ' + underline('https://hexo.io/docs/deployment.html');    console.log(help);    return;  }  function git(...args) {    return spawn('git', args, {      cwd: deployDir,      verbose: verbose,      stdio: 'inherit'    });  }  function setup() {    const userName = args.name || args.user || args.userName || '';    const userEmail = args.email || args.userEmail || '';    // Create a placeholder for the first commit    return fs.writeFile(pathFn.join(deployDir, 'placeholder'), '').then(() => {      return git('init');    }).then(() => {      return userName && git('config', 'user.name', userName);    }).then(() => {      return userEmail && git('config', 'user.email', userEmail);    }).then(() => {      return git('add', '-A');    }).then(() => {      return git('commit', '-m', 'First commit');    });  }  function push(repo) {    return git('add', '-A').then(() => {      return git('commit', '-m', message).catch(() => {        // Do nothing. It's OK if nothing to commit.      });    }).then(() => {      return git('push', '-u', repo.url, 'HEAD:' + repo.branch, '--force');    });  }  return fs.exists(deployDir).then(exist => {    if (exist) return;    log.info('Setting up Git deployment...');    return setup();  }).then(() => {    log.info('Clearing .deploy_git folder...');    return fs.emptyDir(deployDir);  }).then(() => {    const opts = {};    log.info('Copying files from public folder...');    if (typeof ignoreHidden === 'object') {      opts.ignoreHidden = ignoreHidden.public;    } else {      opts.ignoreHidden = ignoreHidden;    }    if (typeof ignorePattern === 'string') {      opts.ignorePattern = new RegExp(ignorePattern);    } else if (typeof ignorePattern === 'object' && Reflect.apply(Object.prototype.hasOwnProperty, ignorePattern, ['public'])) {      opts.ignorePattern = new RegExp(ignorePattern.public);    }    return fs.copyDir(publicDir, deployDir, opts);  }).then(() => {    log.info('Copying files from extend dirs...');    if (!extendDirs) {      return;    }    if (typeof extendDirs === 'string') {      extendDirs = [extendDirs];    }    const mapFn = function(dir) {      const opts = {};      const extendPath = pathFn.join(baseDir, dir);      const extendDist = pathFn.join(deployDir, dir);      if (typeof ignoreHidden === 'object') {        opts.ignoreHidden = ignoreHidden[dir];      } else {        opts.ignoreHidden = ignoreHidden;      }      if (typeof ignorePattern === 'string') {        opts.ignorePattern = new RegExp(ignorePattern);      } else if (typeof ignorePattern === 'object' && Reflect.apply(Object.prototype.hasOwnProperty, ignorePattern, [dir])) {        opts.ignorePattern = new RegExp(ignorePattern[dir]);      }      return fs.copyDir(extendPath, extendDist, opts);    };    return Promise.map(extendDirs, mapFn, {      concurrency: 2    });  }).then(() => {    return parseConfig(args);  }).each(repo => {    return push(repo);  });};function commitMessage(args) {  const message = args.m || args.msg || args.message || 'Site updated: {{ now("yyyy-MM-dd HH:mm:ss") }}';  return nunjucks.renderString(message, swigHelpers);}]]></content>
-    
-    
-      
-      
-    <summary type="html">&#39;use strict&#39;;
-
-const pathFn = require(&#39;path&#39;);
-const fs = require(&#39;hexo-fs&#39;);
-const { underline } = require(&#39;picocolors&#39;);
-const nunjucks = </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://xiao10ma.github.io/1985/10/26/node_modules/hexo-deployer-git/lib/parse_config/"/>
-    <id>http://xiao10ma.github.io/1985/10/26/node_modules/hexo-deployer-git/lib/parse_config/</id>
-    <published>1985-10-26T08:15:00.000Z</published>
-    <updated>1985-10-26T08:15:00.000Z</updated>
-    
-    <content type="html"><![CDATA['use strict';const rRepoURL = /^(?:(git|https?|git\+https|git\+ssh):\/\/)?(?:[^@]+@)?([^\/]+?)[\/:](.+?)\.git$/; // eslint-disable-line no-useless-escapeconst rGithubPage = /\.github\.(io|com)$/;const { URL } = require('url');function parseObjRepo(repo) {  let url = repo.url;  let branch = repo.branch;  const configToken = repo.token;  if (!branch) {    branch = testBranch(url);  }  if (rRepoURL.test(url)) {    const match = url.match(rRepoURL);    const scheme = match[1];    if (configToken && (scheme === 'http' || scheme === 'https')) {      let repoUrl, userToken;      try {        repoUrl = new URL(url);      } catch (e) {        throw new TypeError('Fail to parse your repo url, check your config!');      }      if (configToken.startsWith('$')) {        userToken = process.env[configToken.substring(1)];        if (!userToken) throw new TypeError('Fail to read environment varable: ' + configToken + ', check your config!');      } else {        userToken = configToken;      }      repoUrl.username = userToken;      url = repoUrl.href;    }  }  return {    url: url,    branch: branch || 'master'  };}function parseStrRepo(repo) {  const split = repo.split(',');  const url = split.shift();  let branch = split[0];  if (!branch) {    branch = testBranch(url);  }  return {    url: url,    branch: branch || 'master'  };}function testBranch(repoUrl) {  let branch;  if (rRepoURL.test(repoUrl)) {    const match = repoUrl.match(rRepoURL);    const host = match[2];    const path = match[3];    if (host === 'github.com') {      branch = rGithubPage.test(path) ? 'master' : 'gh-pages';    } else if (host === 'coding.net') {      branch = 'coding-pages';    }  }  return branch;}module.exports = function(args) {  const repo = args.repo || args.repository;  if (!repo) throw new TypeError('repo is required!');  if (typeof repo === 'string') {    const data = parseStrRepo(repo);    data.branch = args.branch || data.branch;    return [data];  }  const keys = Object.keys(repo);  if (keys.includes('url')) {    return [parseObjRepo(repo)];  }  return keys.map(key => {    const repoItem = repo[key];    if (typeof repoItem === 'string') {      const data = parseStrRepo(repoItem);      return data;    }    return parseObjRepo(repo[key]);  });};]]></content>
-    
-    
-      
-      
-    <summary type="html">&#39;use strict&#39;;
-
-const rRepoURL = /^(?:(git|https?|git&#92;+https|git&#92;+ssh):&#92;/&#92;/)?(?:[^@]+@)?([^&#92;/]+?)[&#92;/:](.+?)&#92;.git$/; // eslint-disable-line no</summary>
       
     
     
