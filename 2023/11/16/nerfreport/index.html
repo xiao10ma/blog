@@ -1,0 +1,281 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>NeRF 笔记 | MZP's blog</title><meta name="author" content="Ma ZiPei"><meta name="copyright" content="Ma ZiPei"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="NeRF 报告 写在前面比较巧合，我目前是在计算机学院的HCP实验室，做的方向也是NeRF。但我是一个小白，只是跟在师兄的后面打打杂。本次报告，除了NeRF的原理，我还会介绍一些我目前在做的一些东西（HumanNeRF相关）。  NeRFAbstractNeRF提出了一种通过使用输入视图的稀疏集来优化底层连续体积场景函数，进而实现复杂场景的新视图合成的最先进的结果的方法。使用全连接（非卷积）深度网">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NeRF 笔记">
+<meta property="og:url" content="http://xiao10ma.github.io/2023/11/16/nerfreport/index.html">
+<meta property="og:site_name" content="MZP&#39;s blog">
+<meta property="og:description" content="NeRF 报告 写在前面比较巧合，我目前是在计算机学院的HCP实验室，做的方向也是NeRF。但我是一个小白，只是跟在师兄的后面打打杂。本次报告，除了NeRF的原理，我还会介绍一些我目前在做的一些东西（HumanNeRF相关）。  NeRFAbstractNeRF提出了一种通过使用输入视图的稀疏集来优化底层连续体积场景函数，进而实现复杂场景的新视图合成的最先进的结果的方法。使用全连接（非卷积）深度网">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2023-11-15T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-11-15T16:54:52.411Z">
+<meta property="article:author" content="Ma ZiPei">
+<meta property="article:tag" content="NeRF">
+<meta property="article:tag" content="CG">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://xiao10ma.github.io/2023/11/16/nerfreport/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'NeRF 笔记',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-11-16 00:54:52'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="MZP's blog" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="MZP's blog"><span class="site-name">MZP's blog</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">NeRF 笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-11-15T16:00:00.000Z" title="Created 2023-11-16 00:00:00">2023-11-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-11-15T16:54:52.411Z" title="Updated 2023-11-16 00:54:52">2023-11-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/NeRF/">NeRF</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="NeRF 笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="NeRF-报告"><a href="#NeRF-报告" class="headerlink" title="NeRF 报告"></a>NeRF 报告</h1><blockquote>
+<p>写在前面<br>比较巧合，我目前是在计算机学院的HCP实验室，做的方向也是NeRF。但我是一个小白，只是跟在师兄的后面打打杂。本次报告，除了NeRF的原理，我还会介绍一些我目前在做的一些东西（HumanNeRF相关）。</p>
+</blockquote>
+<h2 id="NeRF"><a href="#NeRF" class="headerlink" title="NeRF"></a>NeRF</h2><h3 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h3><p>NeRF提出了一种通过使用输入视图的稀疏集来优化底层连续体积场景函数，进而实现复杂场景的新视图合成的最先进的结果的方法。使用全连接（非卷积）深度网络，输入有五个维度（空间坐标$(x,y,z)$，视角方向$(\theta,\phi)$），输出是该空间位置的体积密度$\sigma$和视角相关的color。再通过传统的体渲染技术得到最后的像素值。通过比较生成图像和ground truth作为loss，来训练神经网络。</p>
+<h3 id="NeRF的意义是什么？"><a href="#NeRF的意义是什么？" class="headerlink" title="NeRF的意义是什么？"></a>NeRF的意义是什么？</h3><p>经典的图形学渲染流程中，我们是通过对输入的图像进行三维建模，再去进行自由视角的渲染。这就要求构建出非常高质量的三维模型才能渲染出精细的结果。但是很多情况下，三维模型的构建是比较困难的。但是NeRF基于深度学习的流程，通过对三维场景的神经表达，结合可微分渲染，可以实现端到端的训练。最终可以实现在任意视角下对模型的渲染。</p>
+<h3 id="NeRF的基本原理"><a href="#NeRF的基本原理" class="headerlink" title="NeRF的基本原理"></a>NeRF的基本原理</h3><p>NeRF的流程基本上可以用这幅图概括：<br><img src="../images/NeRF/image.png" alt="经典 NeRF 流程图"></p>
+<ol>
+<li><p>沿着相机光线，采样5D坐标合成图像 (位置和观看方向)</p>
+<p>通过$r(t) = o + td$确定光线，沿着该光线得到采样点，$r_i=r(t_i)$</p>
+</li>
+<li><p>将这些输入MLP以产生颜色和体积密度</p>
+<p>将采样点的三维坐标$(x, y, z)$和相机的视角$(\theta, \phi)$作为输入，得到$\sigma$和RGB值。</p>
+</li>
+<li><p>使用传统体渲染技术将这些值计算为最终的RGB值</p>
+<p>$\begin{aligned} \hat{C}(\mathbf{r}) &amp; =\sum_{i=1}^N T_i\left(1-\exp \left(-\sigma_i \delta_i\right)\right) \mathbf{c}_i, \\ T_i &amp; =\exp \left(-\sum_{j=1}^{i-1} \sigma_j \delta_j\right)\end{aligned}$</p>
+</li>
+<li><p>通过最小化合成图像和真实图像之间的loss来优化我们的场景表示</p>
+<p>$\mathcal{L}=\sum_{\mathbf{r} \in \mathcal{R}}|\hat{C}(\mathbf{r})-C(\mathbf{r})|_2^2$</p>
+</li>
+</ol>
+<h3 id="NeRF的一些优化"><a href="#NeRF的一些优化" class="headerlink" title="NeRF的一些优化"></a>NeRF的一些优化</h3><ol>
+<li><p>位置编码</p>
+<p>尽管神经网络是通用的函数近似器, 但作者发现, 让网络 $F \Theta$ 直接操作 $x y z \theta \varphi$ 输入坐标会导致渲染在表示颜色和几何形状方面的高频变化方面表现不佳。这与Rahaman最近的工作是一致的,这表明深度网络偏向于学习低频函数。他们还表明, 在将输入传递给网络之前, 使用高频函数将输入映射到更高维度的空间, 可以更好地拟合包含高频变化的数据。</p>
+</li>
+<li><p>View Dependence</p>
+<p>这是基础图形学中的知识，高光依赖于视角的方向。</p>
+</li>
+<li><p>分层采样</p>
+<p>利用第一次采样点预测的密度值确定第二次采样点的位置，可以减少计算的开销，同时也需要改变下体渲染公式<br>$\mathcal{L}=\sum_{\mathbf{r} \in \mathcal{R}}\left[\left|\hat{C}_c(\mathbf{r})-C(\mathbf{r})\right|_2^2+\left|\hat{C}_f(\mathbf{r})-C(\mathbf{r})\right|_2^2\right]$</p>
+</li>
+</ol>
+<p>以上1，2点的举例：<br><img src="../images/NeRF/image-1.png" alt=""></p>
+<h3 id="NeRF的局限性"><a href="#NeRF的局限性" class="headerlink" title="NeRF的局限性"></a>NeRF的局限性</h3><ol>
+<li>最初时的NeRF计算效率比较低，训练时间长。目前，有一些模型的改善，包括instant-ngp（哈希编码）,3D Gaussian Splatting（高斯核）。目前，3D Gaussian Splatting的效果很不错，对毛发的重建很逼真！！</li>
+<li>无法进行泛化，一个神经网络只适用于一个模型。要是想再重建模型，只能重新训练。</li>
+<li>无法重建动态的场景</li>
+</ol>
+<h2 id="HumanNeRF"><a href="#HumanNeRF" class="headerlink" title="HumanNeRF"></a>HumanNeRF</h2><h3 id="Abstract-1"><a href="#Abstract-1" class="headerlink" title="Abstract"></a>Abstract</h3><p>作者介绍了一种名为“Hu-manNeRF”的自由视点渲染方法。这种方法可以应用于单目摄像头拍摄的视频，例如YouTube上的视频，其中人物进行复杂的身体动作。其核心功能是允许在视频的任何一帧暂停，然后从任意新的摄像机视角渲染主体，甚至可以为那个特定的帧和身体姿势创建一个完整的360度摄像机路径。</p>
+<p>这项任务特别具有挑战性，因为它需要合成从各种可能在输入视频中不存在的摄像机角度看到的身体的逼真细节，以及合成如衣服褶皱和面部外观等细微之处。</p>
+<p>该方法通过优化人物在规范的T型姿势中的体积表示，以及与之配合的运动场，将估计的规范表示映射到视频的每一帧，通过后向扭曲实现。运动场被分解为骨骼的刚性运动和非刚性运动，这些运动由深度网络产生。</p>
+<p>研究表明，与之前的工作相比，这种方法在性能上有显著的提升，并且在未受控制的捕捉场景中，展示了从单目视频中移动人物的自由视点渲染的引人入胜的例子。</p>
+<h3 id="HumanNeRF的基本原理"><a href="#HumanNeRF的基本原理" class="headerlink" title="HumanNeRF的基本原理"></a>HumanNeRF的基本原理</h3><p>HumanNeRF的流程基本上可以用这幅图还有一个公式概括：<br><img src="../images/NeRF/image-2.png" alt=""></p>
+<blockquote>
+<p>We represent a moving person with a canonical appearance volume $F_c$ warped to an observed pose to produce output appearance volume $F_o$ :</p>
+<script type="math/tex; mode=display">
+F_o(\mathbf{x}, \mathbf{p})=F_c(T(\mathbf{x}, \mathbf{p})),</script><p>where $F_c: \mathbf{x} \rightarrow(\mathbf{c}, \sigma)$ maps position $\mathbf{x}$ to color $\mathbf{c}$ and density $\sigma$, and $T:\left(\mathbf{x}_o, \mathbf{p}\right) \rightarrow \mathbf{x}_c$ defines a motion field mapping points from observed space back to canonical space, guided by observed pose $\mathbf{p}=(J, \Omega)$, where $J$ includes $K$ standard 3D joint locations, and $\Omega=\left\{\boldsymbol{\omega}_i\right\}$ are local joint rotations represented as axis-angle vectors $\boldsymbol{\omega}_i$.</p>
+</blockquote>
+<p>我先来讲下这个公式</p>
+<p>$T:\left(\mathbf{x}_o, \mathbf{p}\right) \rightarrow \mathbf{x}_c$这个函数将observation space（观察空间）的点和当前估计的人体pose，映射回canonical space（标准空间）的点。函数$F_c$以标准空间的点作为输入，输出color和$\sigma$。可以看到，这里其实是和传统的NeRF不同的。正如我上面所说，传统的NeRF是有5维的输入，而HumanNeRF却少了$(\theta, \phi)$。这也正是HumanNeRF的一个缺陷，即只能考虑漫反射。</p>
+<p>再来讲讲流程图</p>
+<p>与NeRF一样，相机发出一条射线，再采样。但是作者这里思想非常巧妙。作者运用上面的公式，将观察空间中采样的点映射回标准空间中，从标准空间中采样。有几点好处：</p>
+<ol>
+<li><strong>姿态不变性</strong>：通过将观察空间中的点映射到标准空间，可以将人体的不同姿态统一到一个标准化的参考姿态。这样做有助于模型更好地学习和理解人体的三维结构，而不是专注于特定的姿态或视角。</li>
+<li><strong>数据一致性</strong>：在标准空间中处理数据可以确保不同图像或观察中的相同身体部位被一致地表示，这对于训练神经网络来说是非常重要的。这种一致性有助于网络更有效地学习和泛化。</li>
+<li><strong>简化学习任务</strong>：将复杂的人体动态映射到一个静态的、标准化的空间，可以简化学习任务。网络不需要同时处理人体的动态变化和外观变化，而是可以专注于从标准化的视角学习人体的外观。</li>
+<li><strong>更好的泛化能力</strong>：通过这种映射，模型可以更好地泛化到新的姿态和视角，因为它学习的是从标准化姿态到实际观察姿态的映射。这对于实际应用中的灵活性和鲁棒性是非常重要的。</li>
+<li><strong>高效的渲染</strong>：在标准空间中进行渲染计算可以提高效率，因为可以重用对于不同观察视角相同的计算结果，而不是针对每个新视角重新计算整个场景。</li>
+</ol>
+<p>observation space的点映射到标准空间，作者将$T(x,p)$拆分成两部分：$T(\mathbf{x}, \mathbf{p})=T_{\text {skel }}(\mathbf{x}, \mathbf{p})+T_{\mathrm{NR}}\left(T_{\text {skel }}(\mathbf{x}, \mathbf{p}), \mathbf{p}\right)$。即骨骼和非骨骼两部分。骨骼的部分，正如其名，即为骨骼的映射。非骨骼部分，包括毛发、衣服，这些柔软的材料。</p>
+<p>$T_{\text {skel }}(\mathbf{x}, \mathbf{p})=\sum_{i=1}^K w_o^i(\mathbf{x})\left(R_i \mathbf{x}+\mathbf{t}_i\right)$<br>刚体骨骼这里通过逆LBS实现，LBS具体实现可以参照games105(Lecture7)。逆即为从T-pose到observation pose。</p>
+<p>$T_{\mathrm{NR}}(\mathbf{x}, \mathbf{p})=\operatorname{MLP}_{\theta_{\mathrm{NR}}}(\gamma(\mathbf{x}) ; \Omega)$<br>非骨骼这里通过MLP预测。</p>
+<p>综上所述，HumanNeRF就是从单目摄像头出发，射出光线。在光线中采用，将采样点映射到标准空间中的点。再把标准空间的点输入神经网络，得到其$\sigma$和RGB。最后用体渲染的方式得到最后的像素值。</p>
+<h3 id="自己跑的一些结果"><a href="#自己跑的一些结果" class="headerlink" title="自己跑的一些结果"></a>自己跑的一些结果</h3><p><img src="../images/NeRF/000026.png" alt=""><br><img src="../images/NeRF/000056.png" alt=""><br><img src="../images/NeRF/000083.png" alt=""></p>
+<h3 id="HumanNeRF的局限性"><a href="#HumanNeRF的局限性" class="headerlink" title="HumanNeRF的局限性"></a>HumanNeRF的局限性</h3><p>HumanNeRF对于novel pose不能泛化，其原因是HumanNeRF将Observation space 映射到 canonical space 过拟合了。MonoHuman修正了这个问题。<br>HumanNeRF可能会产生类似于米其林轮胎人的效果（应用新的人体pose）：<br><img src="../images/NeRF/000047.png" alt=""></p>
+<h2 id="MonoHuman"><a href="#MonoHuman" class="headerlink" title="MonoHuman"></a>MonoHuman</h2><blockquote>
+<p>由于变形场是两个不同的多层感知器（MLP），并且依赖于帧或姿态，它们仍然面临过拟合问题。受上述工作的启发，我们设计了我们的共享双向变形模块，使用定义在规范空间中的相同运动权重进行前向和后向变形。</p>
+</blockquote>
+<p>MonoHuman主要的实现，引入L_consis:</p>
+<p>In order to add the constraint that only related to the deformation field as a regularization, we use the intuition of consistency of forward and backward deformation, the consistent loss $\mathbf{L}_{\text {consis }}$ is computed as:</p>
+<script type="math/tex; mode=display">
+L_{\text {consis }}=\left\{\begin{array}{ll}
+d & \text { if } d \geq \theta \\
+0 & \text { else }
+\end{array} d=L_2\left(\mathbf{x}_{\mathbf{o}}, D_f\left(D_b\left(\mathbf{x}_{\mathbf{o}}, \mathbf{p}\right), \mathbf{p}\right)\right),\right.</script><p>where $L_2$ means the $L_2$ distance calculation, and it only penalize the points whose $L_2$ distance is greater than threshold $\theta$ we set to avoid over regularization.</p>
+<ol>
+<li><strong>前向和后向变形的一致性直觉</strong>：这意味着变形应该是可逆的。例如，如果你首先应用一个变形，然后应用其逆变形，理论上你应该回到原始状态。</li>
+<li><p><strong>一致性损失 ( \mathbf{L}_{\text {consis }} )</strong>：这是一个用来衡量变形前后一致性的损失函数。它的计算方式如下：</p>
+<p>$L_{\text {consis }}=\left\{\begin{array}{ll}d &amp; \text { if } d \geq \theta \\ 0 &amp; \text { else }\end{array} d=L_2\left(\mathbf{x}_{\mathbf{o}}, D_f\left(D_b\left(\mathbf{x}_{\mathbf{o}}, \mathbf{p}\right), \mathbf{p}\right)\right)\right.$</p>
+<p>其中 d 是通过以下方式计算的：</p>
+<p>$d=L_2\left(\mathbf{x}_{\mathbf{o}}, D_f\left(D_b\left(\mathbf{x}_{\mathbf{o}}, \mathbf{p}\right), \mathbf{p}\right)\right)$</p>
+<p>这里，$x_o$ 表示原始点，$D_f$ 和 $D_b$ 分别表示前向和后向变形函数，$p$ 表示相关参数。</p>
+</li>
+<li><strong>$L_2$距离计算</strong>：这是一种计算两点之间距离的方法。在这个上下文中，它用于计算变形前后点的距离。</li>
+<li><strong>阈值$\theta$</strong>：这是一个设定的阈值，用于决定何时对点进行惩罚。如果点的$L_2$距离大于这个阈值，它将被纳入损失计算中；如果小于这个阈值，则不会。这样做的目的是为了避免过度正则化，即只对那些变形效果不佳的点施加惩罚。</li>
+</ol>
+<p>这是作者的一个结果，但是我运行的结果一般般，甚至感觉不如HumanNeRF</p>
+<p><img src="../images/NeRF/backflip.gif" alt=""></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/Yzmblog/MonoHuman">MonoHuman GitHub链接</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://xiao10ma.github.io">Ma ZiPei</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://xiao10ma.github.io/2023/11/16/nerfreport/">http://xiao10ma.github.io/2023/11/16/nerfreport/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/NeRF/">NeRF</a><a class="post-meta__tags" href="/tags/CG/">CG</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/11/15/hello-world/" title="Hello World"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next</div><div class="next_info">Hello World</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Ma ZiPei</div><div class="author-info__description">好好学习，天天向上</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xiao10ma"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#NeRF-%E6%8A%A5%E5%91%8A"><span class="toc-number">1.</span> <span class="toc-text">NeRF 报告</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#NeRF"><span class="toc-number">1.1.</span> <span class="toc-text">NeRF</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Abstract"><span class="toc-number">1.1.1.</span> <span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NeRF%E7%9A%84%E6%84%8F%E4%B9%89%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.1.2.</span> <span class="toc-text">NeRF的意义是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NeRF%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="toc-number">1.1.3.</span> <span class="toc-text">NeRF的基本原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NeRF%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BC%98%E5%8C%96"><span class="toc-number">1.1.4.</span> <span class="toc-text">NeRF的一些优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NeRF%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7"><span class="toc-number">1.1.5.</span> <span class="toc-text">NeRF的局限性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HumanNeRF"><span class="toc-number">1.2.</span> <span class="toc-text">HumanNeRF</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Abstract-1"><span class="toc-number">1.2.1.</span> <span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HumanNeRF%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="toc-number">1.2.2.</span> <span class="toc-text">HumanNeRF的基本原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%B7%B1%E8%B7%91%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%93%E6%9E%9C"><span class="toc-number">1.2.3.</span> <span class="toc-text">自己跑的一些结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HumanNeRF%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7"><span class="toc-number">1.2.4.</span> <span class="toc-text">HumanNeRF的局限性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MonoHuman"><span class="toc-number">1.3.</span> <span class="toc-text">MonoHuman</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/16/nerfreport/" title="NeRF 笔记">NeRF 笔记</a><time datetime="2023-11-15T16:00:00.000Z" title="Created 2023-11-16 00:00:00">2023-11-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/15/hello-world/" title="Hello World">Hello World</a><time datetime="2023-11-15T12:30:40.363Z" title="Created 2023-11-15 20:30:40">2023-11-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/15/my-first-blog/" title="my first blog">my first blog</a><time datetime="2023-11-14T16:00:00.000Z" title="Created 2023-11-15 00:00:00">2023-11-15</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Ma ZiPei</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
