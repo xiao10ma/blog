@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2023/11/15/package/</loc>
+    <loc>http://xiao10ma.github.io/2023/11/15/my-first-blog/</loc>
     
     <lastmod>2023-11-15</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/1985/10/26/node_modules/hexo-deployer-git/package/</loc>
+    <loc>http://xiao10ma.github.io/2023/11/15/package/</loc>
     
     <lastmod>2023-11-15</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2023/11/15/my-first-blog/</loc>
+    <loc>http://xiao10ma.github.io/1985/10/26/node_modules/hexo-deployer-git/package/</loc>
     
     <lastmod>2023-11-15</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2023/11/15/hello-world/</loc>
+    <loc>http://xiao10ma.github.io/2023/11/15/hello-world/</loc>
     
     <lastmod>2023-11-15</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/1985/10/26/node_modules/hexo-deployer-git/README/</loc>
+    <loc>http://xiao10ma.github.io/1985/10/26/node_modules/hexo-deployer-git/README/</loc>
     
     <lastmod>1985-10-26</lastmod>
     
@@ -48,13 +48,27 @@
   
 
   <url>
-    <loc>http://example.com/</loc>
+    <loc>http://xiao10ma.github.io/</loc>
     <lastmod>2023-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
+  <url>
+    <loc>http://xiao10ma.github.io/tags/%E6%97%A5%E8%AE%B0/</loc>
+    <lastmod>2023-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
+  
+  <url>
+    <loc>http://xiao10ma.github.io/categories/%E6%97%A5%E8%AE%B0/</loc>
+    <lastmod>2023-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>

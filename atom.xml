@@ -3,11 +3,11 @@
   <title>Hello</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="http://xiao10ma.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="http://xiao10ma.github.io/"/>
   <updated>2023-11-15T12:40:36.525Z</updated>
-  <id>http://example.com/</id>
+  <id>http://xiao10ma.github.io/</id>
   
   <author>
     <name>Ma ZiPei</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title></title>
-    <link href="http://example.com/2023/11/15/package/"/>
-    <id>http://example.com/2023/11/15/package/</id>
+    <link href="http://xiao10ma.github.io/2023/11/15/package/"/>
+    <id>http://xiao10ma.github.io/2023/11/15/package/</id>
     <published>2023-11-15T12:40:36.525Z</published>
     <updated>2023-11-15T12:40:36.525Z</updated>
     
@@ -38,21 +38,32 @@
   
   <entry>
     <title>my first blog</title>
-    <link href="http://example.com/2023/11/15/my-first-blog/"/>
-    <id>http://example.com/2023/11/15/my-first-blog/</id>
+    <link href="http://xiao10ma.github.io/2023/11/15/my-first-blog/"/>
+    <id>http://xiao10ma.github.io/2023/11/15/my-first-blog/</id>
     <published>2023-11-15T12:36:08.000Z</published>
-    <updated>2023-11-15T12:36:08.222Z</updated>
+    <updated>2023-11-15T14:43:36.745Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="第一次在自己的网站上写blog"><a href="#第一次在自己的网站上写blog" class="headerlink" title="第一次在自己的网站上写blog"></a>第一次在自己的网站上写blog</h1><p>前几日，见识一些佬的网站，看着是真的很帅很酷，我想着自己也要搞一个玩玩看。写来试试。以后就要常更博客，变得更厉害hhh</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;第一次在自己的网站上写blog&quot;&gt;&lt;a href=&quot;#第一次在自己的网站上写blog&quot; class=&quot;headerlink&quot; title=&quot;第一次在自己的网站上写blog&quot;&gt;&lt;/a&gt;第一次在自己的网站上写blog&lt;/h1&gt;&lt;p&gt;前几日，见识一些佬的网站，看着是真的</summary>
+      
     
     
     
+    <category term="日记" scheme="http://xiao10ma.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
     
+    
+    <category term="日记" scheme="http://xiao10ma.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2023/11/15/hello-world/"/>
-    <id>http://example.com/2023/11/15/hello-world/</id>
+    <link href="http://xiao10ma.github.io/2023/11/15/hello-world/"/>
+    <id>http://xiao10ma.github.io/2023/11/15/hello-world/</id>
     <published>2023-11-15T12:30:40.363Z</published>
     <updated>2023-11-15T12:30:40.363Z</updated>
     
@@ -71,8 +82,8 @@
   
   <entry>
     <title></title>
-    <link href="http://example.com/1985/10/26/node_modules/hexo-deployer-git/README/"/>
-    <id>http://example.com/1985/10/26/node_modules/hexo-deployer-git/README/</id>
+    <link href="http://xiao10ma.github.io/1985/10/26/node_modules/hexo-deployer-git/README/"/>
+    <id>http://xiao10ma.github.io/1985/10/26/node_modules/hexo-deployer-git/README/</id>
     <published>1985-10-26T08:15:00.000Z</published>
     <updated>1985-10-26T08:15:00.000Z</updated>
     
@@ -91,8 +102,8 @@
   
   <entry>
     <title></title>
-    <link href="http://example.com/1985/10/26/node_modules/hexo-deployer-git/index/"/>
-    <id>http://example.com/1985/10/26/node_modules/hexo-deployer-git/index/</id>
+    <link href="http://xiao10ma.github.io/1985/10/26/node_modules/hexo-deployer-git/index/"/>
+    <id>http://xiao10ma.github.io/1985/10/26/node_modules/hexo-deployer-git/index/</id>
     <published>1985-10-26T08:15:00.000Z</published>
     <updated>1985-10-26T08:15:00.000Z</updated>
     
@@ -115,8 +126,8 @@ hexo.extend.deployer.register(&#39;git&#39;, require(&#39;./lib/deployer&#39;));
   
   <entry>
     <title></title>
-    <link href="http://example.com/1985/10/26/node_modules/hexo-deployer-git/package/"/>
-    <id>http://example.com/1985/10/26/node_modules/hexo-deployer-git/package/</id>
+    <link href="http://xiao10ma.github.io/1985/10/26/node_modules/hexo-deployer-git/package/"/>
+    <id>http://xiao10ma.github.io/1985/10/26/node_modules/hexo-deployer-git/package/</id>
     <published>1985-10-26T08:15:00.000Z</published>
     <updated>2023-11-15T12:40:32.600Z</updated>
     
@@ -135,8 +146,8 @@ hexo.extend.deployer.register(&#39;git&#39;, require(&#39;./lib/deployer&#39;));
   
   <entry>
     <title></title>
-    <link href="http://example.com/1985/10/26/node_modules/hexo-deployer-git/lib/deployer/"/>
-    <id>http://example.com/1985/10/26/node_modules/hexo-deployer-git/lib/deployer/</id>
+    <link href="http://xiao10ma.github.io/1985/10/26/node_modules/hexo-deployer-git/lib/deployer/"/>
+    <id>http://xiao10ma.github.io/1985/10/26/node_modules/hexo-deployer-git/lib/deployer/</id>
     <published>1985-10-26T08:15:00.000Z</published>
     <updated>1985-10-26T08:15:00.000Z</updated>
     
@@ -160,8 +171,8 @@ const nunjucks = </summary>
   
   <entry>
     <title></title>
-    <link href="http://example.com/1985/10/26/node_modules/hexo-deployer-git/lib/parse_config/"/>
-    <id>http://example.com/1985/10/26/node_modules/hexo-deployer-git/lib/parse_config/</id>
+    <link href="http://xiao10ma.github.io/1985/10/26/node_modules/hexo-deployer-git/lib/parse_config/"/>
+    <id>http://xiao10ma.github.io/1985/10/26/node_modules/hexo-deployer-git/lib/parse_config/</id>
     <published>1985-10-26T08:15:00.000Z</published>
     <updated>1985-10-26T08:15:00.000Z</updated>
     
