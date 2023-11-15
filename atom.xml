@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>MZP&#39;s blog</title>
   
-  
+  <subtitle>好好学习，天天向上</subtitle>
   <link href="http://xiao10ma.github.io/atom.xml" rel="self"/>
   
   <link href="http://xiao10ma.github.io/"/>
