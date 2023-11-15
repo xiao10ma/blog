@@ -6,7 +6,7 @@
   <link href="http://xiao10ma.github.io/atom.xml" rel="self"/>
   
   <link href="http://xiao10ma.github.io/"/>
-  <updated>2023-11-15T14:43:36.745Z</updated>
+  <updated>2023-11-15T15:07:53.582Z</updated>
   <id>http://xiao10ma.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://xiao10ma.github.io/2023/11/15/my-first-blog/"/>
     <id>http://xiao10ma.github.io/2023/11/15/my-first-blog/</id>
     <published>2023-11-15T12:36:08.000Z</published>
-    <updated>2023-11-15T14:43:36.745Z</updated>
+    <updated>2023-11-15T15:07:53.582Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="第一次在自己的网站上写blog"><a href="#第一次在自己的网站上写blog" class="headerlink" title="第一次在自己的网站上写blog"></a>第一次在自己的网站上写blog</h1><p>前几日，见识一些佬的网站，看着是真的很帅很酷，我想着自己也要搞一个玩玩看。写来试试。以后就要常更博客，变得更厉害hhh</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="第一次在自己的网站上写blog"><a href="#第一次在自己的网站上写blog" class="headerlink" title="第一次在自己的网站上写blog"></a>第一次在自己的网站上写blog</h1><p>前几日，见识一些佬的网站，看着是真的很帅很酷，我想着自己也要搞一个玩玩看。写来试试。以后就要常更博客，变得更厉害hhh</p><p>花了好久才稍微弄的好看些了，以后再慢慢学习吧</p><p>今天就到这里了，跑步去了</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy </span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">abs</span>(<span class="params">x</span>):</span><br><span class="line"><span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"><span class="keyword">if</span> <span class="string">&#x27;name&#x27;</span> == <span class="string">&#x27;main&#x27;</span>:</span><br><span class="line">fff</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
