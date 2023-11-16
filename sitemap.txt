@@ -3,7 +3,6 @@ https://xiao10ma.github.io/2023/11/15/my-first-blog/
 https://xiao10ma.github.io/2023/11/15/hello-world/
 https://xiao10ma.github.io/
 https://xiao10ma.github.io/tags/%E6%97%A5%E8%AE%B0/
-https://xiao10ma.github.io/tags/NeRF-CG/
 https://xiao10ma.github.io/tags/NeRF/
 https://xiao10ma.github.io/tags/CG/
 https://xiao10ma.github.io/categories/%E6%97%A5%E8%AE%B0/
