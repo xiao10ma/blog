@@ -4,9 +4,9 @@ https://xiao10ma.github.io/categories/index.html
 https://xiao10ma.github.io/2023/11/16/nerfreport/
 https://xiao10ma.github.io/2023/11/15/my-first-blog/
 https://xiao10ma.github.io/
+https://xiao10ma.github.io/tags/CG/
 https://xiao10ma.github.io/tags/%E6%97%A5%E8%AE%B0/
 https://xiao10ma.github.io/tags/NeRF/
-https://xiao10ma.github.io/tags/CG/
+https://xiao10ma.github.io/categories/CG/
 https://xiao10ma.github.io/categories/%E6%97%A5%E8%AE%B0/
 https://xiao10ma.github.io/categories/NeRF/
-https://xiao10ma.github.io/categories/CG/
