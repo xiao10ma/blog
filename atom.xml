@@ -6,7 +6,7 @@
   <link href="https://xiao10ma.github.io/atom.xml" rel="self"/>
   
   <link href="https://xiao10ma.github.io/"/>
-  <updated>2024-01-23T14:20:52.043Z</updated>
+  <updated>2024-01-24T16:03:58.504Z</updated>
   <id>https://xiao10ma.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>寒假day1</title>
+    <link href="https://xiao10ma.github.io/2024/01/24/%E5%AF%92%E5%81%87day1/"/>
+    <id>https://xiao10ma.github.io/2024/01/24/%E5%AF%92%E5%81%87day1/</id>
+    <published>2024-01-23T16:00:00.000Z</published>
+    <updated>2024-01-24T16:03:58.504Z</updated>
+    
+    <content type="html"><![CDATA[<p>如上篇所言，我其实大约已经放了10天假了。标题的day1实质上是指寒假第一天开始的学习。</p><p>不得不承认，我今天又摆烂了。昨天晚上闲着无聊，在b站上找了一个天龙八部的解说看看。一看看到凌晨2点。醒来已是11点。下午继续看天龙八部的解说。晚上又约了和朋友打球。。。直到现在23:41分，才开始学习，弥补自己白天虚度的光阴。罪过罪过。</p><p>昨天晚上已经看了关于<a href="https://huggingface.co/blog/gaussian-splatting">3D gaussian splatting</a>的大致介绍，对其有了个浅显的了解。现在准备，看看意导的<a href="https://www.bilibili.com/video/BV1uV4y1Y7cA/?share_source=copy_web&amp;vd_source=bd133237b66721b62ed05d453aa32bac">视频讲解</a>。</p><p><img src="../images/diary/3dgs-introduction.png" alt=""></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;如上篇所言，我其实大约已经放了10天假了。标题的day1实质上是指寒假第一天开始的学习。&lt;/p&gt;
+&lt;p&gt;不得不承认，我今天又摆烂了。昨天晚上闲着无聊，在b站上找了一个天龙八部的解说看看。一看看到凌晨2点。醒来已是11点。下午继续看天龙八部的解说。晚上又约了和朋友打球。。。直</summary>
+      
+    
+    
+    
+    <category term="日记" scheme="https://xiao10ma.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="日记" scheme="https://xiao10ma.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>学期小结&amp;寒假计划</title>

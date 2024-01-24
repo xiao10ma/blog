@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://xiao10ma.github.io/2024/01/24/%E5%AF%92%E5%81%87day1/</loc>
+    
+    <lastmod>2024-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://xiao10ma.github.io/2024/01/23/%E5%AD%A6%E6%9C%9F%E5%B0%8F%E7%BB%93&%E5%AF%92%E5%81%87%E8%AE%A1%E5%88%92/</loc>
     
     <lastmod>2024-01-23</lastmod>
@@ -58,7 +67,7 @@
 
   <url>
     <loc>https://xiao10ma.github.io/</loc>
-    <lastmod>2024-01-23</lastmod>
+    <lastmod>2024-01-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -66,21 +75,21 @@
   
   <url>
     <loc>https://xiao10ma.github.io/tags/NeRF/</loc>
-    <lastmod>2024-01-23</lastmod>
+    <lastmod>2024-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/tags/CG/</loc>
-    <lastmod>2024-01-23</lastmod>
+    <lastmod>2024-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/tags/%E6%97%A5%E8%AE%B0/</loc>
-    <lastmod>2024-01-23</lastmod>
+    <lastmod>2024-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -89,21 +98,21 @@
   
   <url>
     <loc>https://xiao10ma.github.io/categories/NeRF/</loc>
-    <lastmod>2024-01-23</lastmod>
+    <lastmod>2024-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/categories/%E6%97%A5%E8%AE%B0/</loc>
-    <lastmod>2024-01-23</lastmod>
+    <lastmod>2024-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/categories/CG/</loc>
-    <lastmod>2024-01-23</lastmod>
+    <lastmod>2024-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
