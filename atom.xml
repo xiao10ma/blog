@@ -6,7 +6,7 @@
   <link href="https://xiao10ma.github.io/atom.xml" rel="self"/>
   
   <link href="https://xiao10ma.github.io/"/>
-  <updated>2024-01-24T16:03:58.504Z</updated>
+  <updated>2024-01-24T16:30:13.314Z</updated>
   <id>https://xiao10ma.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://xiao10ma.github.io/2024/01/24/%E5%AF%92%E5%81%87day1/"/>
     <id>https://xiao10ma.github.io/2024/01/24/%E5%AF%92%E5%81%87day1/</id>
     <published>2024-01-23T16:00:00.000Z</published>
-    <updated>2024-01-24T16:03:58.504Z</updated>
+    <updated>2024-01-24T16:30:13.314Z</updated>
     
-    <content type="html"><![CDATA[<p>如上篇所言，我其实大约已经放了10天假了。标题的day1实质上是指寒假第一天开始的学习。</p><p>不得不承认，我今天又摆烂了。昨天晚上闲着无聊，在b站上找了一个天龙八部的解说看看。一看看到凌晨2点。醒来已是11点。下午继续看天龙八部的解说。晚上又约了和朋友打球。。。直到现在23:41分，才开始学习，弥补自己白天虚度的光阴。罪过罪过。</p><p>昨天晚上已经看了关于<a href="https://huggingface.co/blog/gaussian-splatting">3D gaussian splatting</a>的大致介绍，对其有了个浅显的了解。现在准备，看看意导的<a href="https://www.bilibili.com/video/BV1uV4y1Y7cA/?share_source=copy_web&amp;vd_source=bd133237b66721b62ed05d453aa32bac">视频讲解</a>。</p><p><img src="../images/diary/3dgs-introduction.png" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<p>如上篇所言，我其实大约已经放了10天假了。标题的day1实质上是指寒假第一天开始的学习。</p><p>不得不承认，我今天又摆烂了。昨天晚上闲着无聊，在b站上找了一个天龙八部的解说看看。一看看到凌晨2点。醒来已是11点。下午继续看天龙八部的解说。晚上又约了和朋友打球。。。直到现在23:41分，才开始学习，弥补自己白天虚度的光阴。罪过罪过。</p><p>昨天晚上已经看了关于<a href="https://huggingface.co/blog/gaussian-splatting">3D gaussian splatting</a>的大致介绍，对其有了个浅显的了解。现在准备，看看意导的<a href="https://www.bilibili.com/video/BV1uV4y1Y7cA/?share_source=copy_web&amp;vd_source=bd133237b66721b62ed05d453aa32bac">视频讲解</a>。</p><p><img src="https://xiao10ma.github.io/images/diary/3dgs-introduction.png" alt=""></p><ul><li><p><strong>可微渲染</strong><br>  可微光栅化（Differentiable Rendering）是计算机图形学中的一个重要概念，近年来在机器学习和计算机视觉领域尤其受到关注。光栅化（Rasterization）是计算机图形学中将三维模型转换为二维图像的过程，它涉及将模型的顶点、边和面映射到屏幕上的像素，并确定这些像素的颜色和其他属性。</p><p>  在传统的光栅化过程中，这一转换通常是不可逆的，也就是说，一旦三维模型被转换成二维图像，就很难再从这个图像中准确地重构出原始的三维模型。这种不可逆性使得传统光栅化在一些应用场景中受限，特别是在需要高度精确的逆向推理时。</p><p>  可微光栅化是对传统光栅化的一个重要扩展，它引入了可微分的特性。这意味着在可微光栅化过程中，不仅可以从三维模型生成二维图像，还可以根据这个二维图像的变化反向推导出三维模型的变化。这一特性使得可微光栅化在机器学习和计算机视觉的应用中非常有价值，例如在三维重建、形状和外观建模、以及图像到三维的直接推理等任务中。</p><p>  在技术实现上，可微光栅化通常通过设计可微分的渲染过程来实现。这可能涉及到对渲染方程的修改，以保证在数学上的可微分性，从而可以使用基于梯度的优化方法（如反向传播算法）来调整三维模型的参数，以最小化渲染图像与目标图像之间的差异。</p><p>  总的来说，可微光栅化是一种桥接计算机图形学和计算机视觉的重要技术，它通过使光栅化过程可微分，为三维模型的自动优化和推理提供了强大的工具。</p></li><li><strong>自适应密度控制</strong><ul><li>如果该高斯图像很小，则克隆它</li><li>如果该高斯图像很大，则将其分割</li></ul></li><li><strong>大致流程</strong><br>  首先，用SfM求得点云，初始化为3D gaussians，根据Camera的外参作投影。接着做光栅化，最终渲染得到图像。训练时，基于和GT的loss，沿蓝色箭头反向传播。Differentiable tile rasterizer往左的两个箭头：上面的是更新3D gaussians的参数；下面进行自适应密度进行控制更新3D gaussians的个数。</li></ul>]]></content>
     
     
       
