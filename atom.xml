@@ -6,7 +6,7 @@
   <link href="https://xiao10ma.github.io/atom.xml" rel="self"/>
   
   <link href="https://xiao10ma.github.io/"/>
-  <updated>2024-03-29T07:25:46.342Z</updated>
+  <updated>2024-03-29T13:11:10.644Z</updated>
   <id>https://xiao10ma.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://xiao10ma.github.io/2024/03/29/pytorch%E5%8D%9A%E5%AE%A2%E6%94%B6%E8%97%8F%E5%A4%B9/"/>
     <id>https://xiao10ma.github.io/2024/03/29/pytorch%E5%8D%9A%E5%AE%A2%E6%94%B6%E8%97%8F%E5%A4%B9/</id>
     <published>2024-03-28T16:00:00.000Z</published>
-    <updated>2024-03-29T07:25:46.342Z</updated>
+    <updated>2024-03-29T13:11:10.644Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>记录一些在看代码时遇到的一些问题及博客</p></blockquote><p>知乎收藏夹：</p><ul><li><a href="https://www.zhihu.com/collection/947243718">https://www.zhihu.com/collection/947243718</a></li></ul><p>csdn收藏夹：</p><ul><li><a href="https://i.csdn.net/#/user-center/collection-list?type=1&amp;folder=36818606&amp;key=1">https://i.csdn.net/#/user-center/collection-list?type=1&amp;folder=36818606&amp;key=1</a></li></ul><p>模型save and load:</p><ul><li><a href="https://www.cnblogs.com/Zhuohome/p/15599792.html">https://www.cnblogs.com/Zhuohome/p/15599792.html</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>记录一些在看代码时遇到的一些问题及博客</p></blockquote><p>知乎收藏夹：</p><ul><li><a href="https://www.zhihu.com/collection/947243718">https://www.zhihu.com/collection/947243718</a></li></ul><p>csdn收藏夹：</p><ul><li><a href="https://i.csdn.net/#/user-center/collection-list?type=1&amp;folder=36818606&amp;key=1">https://i.csdn.net/#/user-center/collection-list?type=1&amp;folder=36818606&amp;key=1</a></li></ul><p>模型save and load:</p><ul><li><a href="https://www.cnblogs.com/Zhuohome/p/15599792.html">https://www.cnblogs.com/Zhuohome/p/15599792.html</a></li></ul><p>nerf 解读：</p><ul><li>原理：<a href="https://zhuanlan.zhihu.com/p/481275794">https://zhuanlan.zhihu.com/p/481275794</a></li><li>代码：<a href="https://zhuanlan.zhihu.com/p/482154458">https://zhuanlan.zhihu.com/p/482154458</a></li><li>相机参数与坐标系变换：<a href="https://zhuanlan.zhihu.com/p/593204605/">https://zhuanlan.zhihu.com/p/593204605/</a></li></ul>]]></content>
     
     
       
