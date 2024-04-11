@@ -14,8 +14,12 @@ https://xiao10ma.github.io/tags/%E6%97%A5%E8%AE%B0/
 https://xiao10ma.github.io/tags/pytorch/
 https://xiao10ma.github.io/tags/python/
 https://xiao10ma.github.io/tags/deep-learning/
+https://xiao10ma.github.io/tags/%E7%AE%97%E6%B3%95/
+https://xiao10ma.github.io/tags/leetcode/
 https://xiao10ma.github.io/categories/NeRF/
 https://xiao10ma.github.io/categories/%E6%97%A5%E8%AE%B0/
 https://xiao10ma.github.io/categories/CG/
 https://xiao10ma.github.io/categories/pytorch/
 https://xiao10ma.github.io/categories/pytorch/pythom/
+https://xiao10ma.github.io/categories/%E7%AE%97%E6%B3%95/
+https://xiao10ma.github.io/categories/%E7%AE%97%E6%B3%95/leetcode/

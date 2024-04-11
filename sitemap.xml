@@ -133,6 +133,20 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://xiao10ma.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2024-04-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xiao10ma.github.io/tags/leetcode/</loc>
+    <lastmod>2024-04-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -165,6 +179,20 @@
   
   <url>
     <loc>https://xiao10ma.github.io/categories/pytorch/pythom/</loc>
+    <lastmod>2024-04-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xiao10ma.github.io/categories/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2024-04-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xiao10ma.github.io/categories/%E7%AE%97%E6%B3%95/leetcode/</loc>
     <lastmod>2024-04-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
