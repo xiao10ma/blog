@@ -41,6 +41,30 @@
   </entry>
   
   <entry>
+    <title>OJ刷题总结 7</title>
+    <link href="https://xiao10ma.github.io/2024/05/29/leetcode%E5%88%B7%E9%A2%98/oj%E5%88%B7%E9%A2%98%E6%80%BB%E7%BB%937/"/>
+    <id>https://xiao10ma.github.io/2024/05/29/leetcode%E5%88%B7%E9%A2%98/oj%E5%88%B7%E9%A2%98%E6%80%BB%E7%BB%937/</id>
+    <published>2024-05-28T16:00:00.000Z</published>
+    <updated>2024-05-29T12:11:02.018Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="OJ刷题总结7——0-1背包-完全背包"><a href="#OJ刷题总结7——0-1背包-完全背包" class="headerlink" title="OJ刷题总结7——0-1背包 完全背包"></a>OJ刷题总结7——0-1背包 完全背包</h1><h2 id="1-0-1背包"><a href="#1-0-1背包" class="headerlink" title="1. 0-1背包"></a>1. 0-1背包</h2><p>有 $n$ 个物品 第 $i$ 个物品的体积为 $w[i]$ ，价值为 $v[i]$每个物品至多选一个，求体积和不超过 capacity 时的最大价值和</p><p>回溯三问：</p><ol><li>当前操作？枚举第<code>i</code>个物品选或不选<ul><li>不选，剩余容量不变</li><li>选，剩余容量减少<code>w[i]</code></li></ul></li><li>子问题？在剩余容量为<code>c</code>时，从前<code>i</code>个物品中得到的最大价值和</li><li>下一个子问题？分类讨论：<ul><li>不选：在剩余容量为<code>c</code>时，从前<code>i-1</code>个物品中得到的最大价值和</li><li>选：在剩余容量为<code>c-w[i]</code>时，从前<code>i-1</code>个物品中得到的最大价值和</li></ul></li></ol><p><code>dfs(i, c) = max(dfs(i - 1, c), dfs(i - 1, c - w[i]) + v[i])</code></p><h3 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">zero_one_bag</span>(<span class="params">capacity, w, v</span>):</span><br><span class="line">    n = <span class="built_in">len</span>(w)</span><br><span class="line"></span><br><span class="line"><span class="meta">    @cache</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">dfs</span>(<span class="params">i, c</span>):</span><br><span class="line">        <span class="keyword">if</span> i &lt; <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> c &lt; w[i]:</span><br><span class="line">            <span class="keyword">return</span> dfs(i-<span class="number">1</span>, c)</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">max</span>(dfs(i-<span class="number">1</span>, c), dfs(i-<span class="number">1</span>, c-w[i]) + v[i])</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> dfs(n - <span class="number">1</span>, capacity)</span><br></pre></td></tr></table></figure><h3 id="常见变形"><a href="#常见变形" class="headerlink" title="常见变形"></a>常见变形</h3><ol><li>至多装<code>capacity</code>，求方案数/最大价值和</li><li>恰好装<code>capacity</code>，求方案数/最大/最小价值和</li><li>至少装<code>capacity</code>，求方案书/最小价值和</li></ol><p>方案数：<code>dfs(i, c) = dfs(i - 1, c) + dfs(i - 1, c - w[i])</code></p><p><strong>时间复杂度</strong>：$O(n \cdot (target + s))$</p><p><strong>空间复杂度</strong>：$O(n \cdot (target + s))$</p><p>进一步优化空间复杂度：</p><p>==记忆化搜索可以1:1翻译成递推==，做法就是把dfs函数改成f数组，递归改成循环就好了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;OJ刷题总结7——0-1背包-完全背包&quot;&gt;&lt;a href=&quot;#OJ刷题总结7——0-1背包-完全背包&quot; class=&quot;headerlink&quot; title=&quot;OJ刷题总结7——0-1背包 完全背包&quot;&gt;&lt;/a&gt;OJ刷题总结7——0-1背包 完全背包&lt;/h1&gt;&lt;h2 i</summary>
+      
+    
+    
+    
+    <category term="leetcode" scheme="https://xiao10ma.github.io/categories/leetcode/"/>
+    
+    
+    <category term="leetcode" scheme="https://xiao10ma.github.io/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
     <title>OJ刷题总结 5</title>
     <link href="https://xiao10ma.github.io/2024/05/08/leetcode%E5%88%B7%E9%A2%98/oj%E5%88%B7%E9%A2%98%E6%80%BB%E7%BB%935/"/>
     <id>https://xiao10ma.github.io/2024/05/08/leetcode%E5%88%B7%E9%A2%98/oj%E5%88%B7%E9%A2%98%E6%80%BB%E7%BB%935/</id>
