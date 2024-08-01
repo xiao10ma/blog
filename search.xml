@@ -4,13 +4,29 @@
   
     
     <entry>
-      <title></title>
+      <title>pytorch(python)博客收藏</title>
       <link href="/2024/08/01/%E6%95%B0%E5%AD%A6/"/>
       <url>/2024/08/01/%E6%95%B0%E5%AD%A6/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<blockquote><p>记录一些数学知识，方便以后忘记时回来</p></blockquote><p><a href="http://www.yindaheng98.top/%E6%95%B0%E5%AD%A6/SVD.html#%E5%90%84%E7%A7%8D%E7%9F%A9%E9%98%B5%E5%88%86%E8%A7%A3">SVD</a>：主要用途，解欠定、超定方程</p>]]></content>
       
       
+      <categories>
+          
+          <category> math </category>
+          
+          <category> linear algebra </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> math </tag>
+            
+            <tag> linear algebra </tag>
+            
+        </tags>
       
     </entry>
     

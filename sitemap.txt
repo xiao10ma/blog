@@ -28,6 +28,8 @@ https://xiao10ma.github.io/tags/%E7%AE%97%E6%B3%95/
 https://xiao10ma.github.io/tags/leetcode/
 https://xiao10ma.github.io/tags/nerf/
 https://xiao10ma.github.io/tags/3dgs/
+https://xiao10ma.github.io/tags/math/
+https://xiao10ma.github.io/tags/linear-algebra/
 https://xiao10ma.github.io/categories/NeRF/
 https://xiao10ma.github.io/categories/%E6%97%A5%E8%AE%B0/
 https://xiao10ma.github.io/categories/CG/
@@ -39,3 +41,5 @@ https://xiao10ma.github.io/categories/leetcode/
 https://xiao10ma.github.io/categories/nerf/
 https://xiao10ma.github.io/categories/pytorch/python/
 https://xiao10ma.github.io/categories/nerf/3dgs/
+https://xiao10ma.github.io/categories/math/
+https://xiao10ma.github.io/categories/math/linear-algebra/
