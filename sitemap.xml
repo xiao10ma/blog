@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://xiao10ma.github.io/2024/09/02/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/</loc>
+    
+    <lastmod>2024-09-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://xiao10ma.github.io/2024/03/29/pytorch%E5%8D%9A%E5%AE%A2%E6%94%B6%E8%97%8F%E5%A4%B9/</loc>
     
     <lastmod>2024-09-02</lastmod>
@@ -20,24 +29,6 @@
   </url>
   
   <url>
-    <loc>https://xiao10ma.github.io/2024/06/06/leetcode%E5%88%B7%E9%A2%98/oj%E5%88%B7%E9%A2%98%E6%80%BB%E7%BB%938/</loc>
-    
-    <lastmod>2024-06-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xiao10ma.github.io/2024/05/31/leetcode%E5%88%B7%E9%A2%98/oj%E5%88%B7%E9%A2%98%E6%80%BB%E7%BB%937/</loc>
-    
-    <lastmod>2024-06-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://xiao10ma.github.io/2023/11/16/%E5%9B%BE%E5%BD%A2%E5%AD%A6/nerfreport/</loc>
     
     <lastmod>2024-05-29</lastmod>
@@ -47,72 +38,9 @@
   </url>
   
   <url>
-    <loc>https://xiao10ma.github.io/2024/05/29/leetcode%E5%88%B7%E9%A2%98/oj%E5%88%B7%E9%A2%98%E6%80%BB%E7%BB%936/</loc>
-    
-    <lastmod>2024-05-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xiao10ma.github.io/2024/05/08/leetcode%E5%88%B7%E9%A2%98/oj%E5%88%B7%E9%A2%98%E6%80%BB%E7%BB%935/</loc>
-    
-    <lastmod>2024-05-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xiao10ma.github.io/2024/05/07/leetcode%E5%88%B7%E9%A2%98/oj%E5%88%B7%E9%A2%98%E6%80%BB%E7%BB%934/</loc>
-    
-    <lastmod>2024-05-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xiao10ma.github.io/2024/04/20/leetcode%E5%88%B7%E9%A2%98/oj%E5%88%B7%E9%A2%98%E6%80%BB%E7%BB%933/</loc>
-    
-    <lastmod>2024-04-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://xiao10ma.github.io/2024/04/19/nerf_3dgs%E5%8D%9A%E5%AE%A2%E6%94%B6%E8%97%8F%E5%A4%B9/</loc>
     
     <lastmod>2024-04-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xiao10ma.github.io/2024/04/18/leetcode%E5%88%B7%E9%A2%98/oj%E5%88%B7%E9%A2%98%E6%80%BB%E7%BB%932/</loc>
-    
-    <lastmod>2024-04-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xiao10ma.github.io/2024/04/12/leetcode%E5%88%B7%E9%A2%98/%E5%9B%BE%E8%AE%BA%E6%A8%A1%E7%89%88/</loc>
-    
-    <lastmod>2024-04-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xiao10ma.github.io/2024/04/11/leetcode%E5%88%B7%E9%A2%98/oj%E5%88%B7%E9%A2%98%E6%80%BB%E7%BB%931/</loc>
-    
-    <lastmod>2024-04-12</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -175,7 +103,7 @@
 
   <url>
     <loc>https://xiao10ma.github.io/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -183,84 +111,84 @@
   
   <url>
     <loc>https://xiao10ma.github.io/tags/NeRF/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/tags/CG/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/tags/%E6%97%A5%E8%AE%B0/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/tags/pytorch/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/tags/python/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/tags/deep-learning/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/tags/leetcode/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/tags/nerf/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/tags/3dgs/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/tags/math/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/tags/linear-algebra/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -269,98 +197,119 @@
   
   <url>
     <loc>https://xiao10ma.github.io/categories/NeRF/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/categories/%E6%97%A5%E8%AE%B0/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/categories/CG/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/categories/pytorch/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/categories/pytorch/pythom/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/categories/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/categories/%E7%AE%97%E6%B3%95/leetcode/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/categories/leetcode/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/categories/nerf/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/categories/pytorch/python/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/categories/nerf/3dgs/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/categories/math/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/categories/math/linear-algebra/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/categories/pytorch/python/numpy/</loc>
-    <lastmod>2024-09-02</lastmod>
+    <lastmod>2024-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xiao10ma.github.io/categories/server/</loc>
+    <lastmod>2024-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xiao10ma.github.io/categories/server/conda/</loc>
+    <lastmod>2024-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xiao10ma.github.io/categories/server/conda/python/</loc>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
