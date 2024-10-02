@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://xiao10ma.github.io/2024/10/02/Diffusion_Model/</loc>
+    
+    <lastmod>2024-10-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://xiao10ma.github.io/2024/03/29/pytorch%E5%8D%9A%E5%AE%A2%E6%94%B6%E8%97%8F%E5%A4%B9/</loc>
     
     <lastmod>2024-10-02</lastmod>
@@ -38,16 +47,7 @@
   </url>
   
   <url>
-    <loc>https://xiao10ma.github.io/2023/11/16/%E5%9B%BE%E5%BD%A2%E5%AD%A6/nerfreport/</loc>
-    
-    <lastmod>2024-10-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xiao10ma.github.io/2024/10/02/Diffusion_Model/</loc>
+    <loc>https://xiao10ma.github.io/2023/11/16/3DV/nerfreport/</loc>
     
     <lastmod>2024-10-02</lastmod>
     

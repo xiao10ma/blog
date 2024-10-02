@@ -6,7 +6,7 @@
   <link href="https://xiao10ma.github.io/atom.xml" rel="self"/>
   
   <link href="https://xiao10ma.github.io/"/>
-  <updated>2024-10-02T05:53:37.385Z</updated>
+  <updated>2024-10-02T06:26:38.672Z</updated>
   <id>https://xiao10ma.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://xiao10ma.github.io/2024/10/02/Diffusion_Model/"/>
     <id>https://xiao10ma.github.io/2024/10/02/Diffusion_Model/</id>
     <published>2024-10-01T16:00:00.000Z</published>
-    <updated>2024-10-02T05:53:37.385Z</updated>
+    <updated>2024-10-02T06:26:38.672Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Diffusion-Model"><a href="#Diffusion-Model" class="headerlink" title="Diffusion Model"></a>Diffusion Model</h1><blockquote><p>扩散现象是指物质粒子从高浓度区域向低浓度区域移动的过程，如往水中滴入墨水。DDPM受到启发，将前向加噪也看成是扩散过程，逐步将有意义的原图像完全变成无意义的噪声。</p></blockquote><h2 id="前向加噪"><a href="#前向加噪" class="headerlink" title="前向加噪"></a>前向加噪</h2>]]></content>
+    <content type="html"><![CDATA[<h1 id="Diffusion-Model"><a href="#Diffusion-Model" class="headerlink" title="Diffusion Model"></a>Diffusion Model</h1><blockquote><p>扩散现象是指物质粒子从高浓度区域向低浓度区域移动的过程，如往水中滴入墨水。DDPM受到启发，将前向加噪也看成是扩散过程，逐步将有意义的原图像完全变成无意义的噪声。</p></blockquote><h2 id="前向加噪"><a href="#前向加噪" class="headerlink" title="前向加噪"></a>前向加噪</h2><p><img src="https://xiao10ma.github.io/images/DDPM/forward.png" alt=""></p>]]></content>
     
     
       
@@ -166,8 +166,8 @@
   
   <entry>
     <title>NeRF 笔记</title>
-    <link href="https://xiao10ma.github.io/2023/11/16/%E5%9B%BE%E5%BD%A2%E5%AD%A6/nerfreport/"/>
-    <id>https://xiao10ma.github.io/2023/11/16/%E5%9B%BE%E5%BD%A2%E5%AD%A6/nerfreport/</id>
+    <link href="https://xiao10ma.github.io/2023/11/16/3DV/nerfreport/"/>
+    <id>https://xiao10ma.github.io/2023/11/16/3DV/nerfreport/</id>
     <published>2023-11-15T16:00:00.000Z</published>
     <updated>2024-10-02T05:54:29.061Z</updated>
     
