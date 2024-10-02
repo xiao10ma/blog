@@ -1,8 +1,9 @@
-https://xiao10ma.github.io/2024/09/02/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/
 https://xiao10ma.github.io/2024/03/29/pytorch%E5%8D%9A%E5%AE%A2%E6%94%B6%E8%97%8F%E5%A4%B9/
-https://xiao10ma.github.io/2024/08/01/%E6%95%B0%E5%AD%A6/
-https://xiao10ma.github.io/2023/11/16/%E5%9B%BE%E5%BD%A2%E5%AD%A6/nerfreport/
 https://xiao10ma.github.io/2024/04/19/nerf_3dgs%E5%8D%9A%E5%AE%A2%E6%94%B6%E8%97%8F%E5%A4%B9/
+https://xiao10ma.github.io/2024/08/01/%E6%95%B0%E5%AD%A6/
+https://xiao10ma.github.io/2024/09/02/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/
+https://xiao10ma.github.io/2023/11/16/%E5%9B%BE%E5%BD%A2%E5%AD%A6/nerfreport/
+https://xiao10ma.github.io/2024/10/02/Diffusion_Model/
 https://xiao10ma.github.io/tags/index.html
 https://xiao10ma.github.io/categories/index.html
 https://xiao10ma.github.io/
@@ -18,6 +19,8 @@ https://xiao10ma.github.io/tags/nerf/
 https://xiao10ma.github.io/tags/3dgs/
 https://xiao10ma.github.io/tags/math/
 https://xiao10ma.github.io/tags/linear-algebra/
+https://xiao10ma.github.io/tags/AIGC/
+https://xiao10ma.github.io/tags/DDPM/
 https://xiao10ma.github.io/categories/NeRF/
 https://xiao10ma.github.io/categories/%E6%97%A5%E8%AE%B0/
 https://xiao10ma.github.io/categories/CG/
@@ -35,3 +38,7 @@ https://xiao10ma.github.io/categories/pytorch/python/numpy/
 https://xiao10ma.github.io/categories/server/
 https://xiao10ma.github.io/categories/server/conda/
 https://xiao10ma.github.io/categories/server/conda/python/
+https://xiao10ma.github.io/categories/AIGC/
+https://xiao10ma.github.io/categories/3DV/
+https://xiao10ma.github.io/categories/AIGC/DDPM/
+https://xiao10ma.github.io/categories/3DV/NeRF/

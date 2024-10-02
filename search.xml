@@ -4,20 +4,45 @@
   
     
     <entry>
+      <title>Diffusion Model</title>
+      <link href="/2024/10/02/Diffusion_Model/"/>
+      <url>/2024/10/02/Diffusion_Model/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Diffusion-Model"><a href="#Diffusion-Model" class="headerlink" title="Diffusion Model"></a>Diffusion Model</h1><blockquote><p>扩散现象是指物质粒子从高浓度区域向低浓度区域移动的过程，如往水中滴入墨水。DDPM受到启发，将前向加噪也看成是扩散过程，逐步将有意义的原图像完全变成无意义的噪声。</p></blockquote><h2 id="前向加噪"><a href="#前向加噪" class="headerlink" title="前向加噪"></a>前向加噪</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> AIGC </category>
+          
+          <category> DDPM </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AIGC </tag>
+            
+            <tag> DDPM </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>服务器搭建</title>
       <link href="/2024/09/02/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/"/>
       <url>/2024/09/02/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/</url>
       
-        <content type="html"><![CDATA[<blockquote><p>本人记忆着实一般，这几天新得了几台服务器的权限，要记录下来，怎么开坑，方便自己遇到此类问题。寻来方便。。</p><p><del>毕竟，前一天刚开一个服务器；第二天就忘了具体咋操作了</del></p></blockquote><p>本人是做deep learning的，故本文仅仅适合DL的同学来看，其余不是很确定？？？</p><ol><li><p>在/home/mazipei/目录下，下载miniconda/anaconda（看个人喜好，mini够用）</p><ul><li>下载 Miniconda (Python3 version)</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</span><br></pre></td></tr></table></figure><ul><li>安装</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash Miniconda3-latest-Linux-x86_64.sh</span><br></pre></td></tr></table></figure><ul><li>随后一直按回车，所有都yes<br>安装好后，<code>source ~/.bashrc</code></li></ul></li><li><p>设置清华源</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install --upgrade pip</span><br><span class="line">pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple</span><br></pre></td></tr></table></figure></li><li>找一个github repo下一个你要用的 conda 环境，我目前在做 4d edit，找了 <a href="https://github.com/Friedrich-M/Instruct-4D-to-4D#environmental-setups">Instruct4D-to-4D</a><ul><li>创建一个环境：<code>conda create -n instruct4d python=3.8</code></li><li>查看当前服务器装了什么版本的cuda，（一般师兄都会帮你装好）<ul><li><code>cat /usr/local/cuda/version.json</code><ul><li>安装torch：<code>pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 --index-url https://download.pytorch.org/whl/cu118</code></li><li>安装当前repo需要的其他库：<code>pip install -r requirements.txt</code></li></ul></li></ul></li></ul></li></ol>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>本人记忆着实一般，这几天新得了几台服务器的权限，要记录下来，怎么开坑，方便自己遇到此类问题。寻来方便。。</p><p><del>毕竟，前一天刚开一个服务器；第二天就忘了具体咋操作了</del></p></blockquote><p>本人是做deep learning的，故本文仅仅适合DL的同学来看，其余不是很确定？？？</p><ol><li><p>在/home/mazipei/目录下，下载miniconda/anaconda（看个人喜好，mini够用）</p><ul><li>下载 Miniconda (Python3 version)</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</span><br></pre></td></tr></table></figure><ul><li>安装</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash Miniconda3-latest-Linux-x86_64.sh</span><br></pre></td></tr></table></figure><ul><li>随后一直按回车，所有都yes<br>安装好后，<code>source ~/.bashrc</code></li></ul></li><li><p>设置清华源</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install --upgrade pip</span><br><span class="line">pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple</span><br></pre></td></tr></table></figure></li><li><p>找一个github repo下一个你要用的 conda 环境，我目前在做 4d edit，找了 <a href="https://github.com/Friedrich-M/Instruct-4D-to-4D#environmental-setups">Instruct4D-to-4D</a></p><ul><li>创建一个环境：<code>conda create -n instruct4d python=3.8</code></li><li>查看当前服务器装了什么版本的cuda，（一般师兄都会帮你装好）<ul><li><code>cat /usr/local/cuda/version.json</code></li></ul></li><li>安装torch：<code>pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 --index-url https://download.pytorch.org/whl/cu118</code></li><li>安装当前repo需要的其他库：<code>pip install -r requirements.txt</code></li></ul></li></ol>]]></content>
       
       
       <categories>
           
           <category> server </category>
-          
-          <category> conda </category>
-          
-          <category> python </category>
           
       </categories>
       
@@ -37,8 +62,6 @@
       <categories>
           
           <category> math </category>
-          
-          <category> linear algebra </category>
           
       </categories>
       
@@ -60,14 +83,12 @@
       <link href="/2024/04/19/nerf_3dgs%E5%8D%9A%E5%AE%A2%E6%94%B6%E8%97%8F%E5%A4%B9/"/>
       <url>/2024/04/19/nerf_3dgs%E5%8D%9A%E5%AE%A2%E6%94%B6%E8%97%8F%E5%A4%B9/</url>
       
-        <content type="html"><![CDATA[<blockquote><p> 记录一些nerf，3dgs的前置知识及讲解的博客和视频</p></blockquote><p>知乎收藏夹：</p><ul><li><a href="https://www.zhihu.com/collection/949437601">https://www.zhihu.com/collection/949437601</a></li></ul><p>nerf 解读：</p><ul><li>原理：<a href="https://zhuanlan.zhihu.com/p/481275794">https://zhuanlan.zhihu.com/p/481275794</a></li><li>代码：<a href="https://zhuanlan.zhihu.com/p/482154458">https://zhuanlan.zhihu.com/p/482154458</a></li><li>相机参数与坐标系变换：<a href="https://zhuanlan.zhihu.com/p/593204605/">https://zhuanlan.zhihu.com/p/593204605/</a></li></ul><p>球协函数：</p><ul><li><a href="http://www.yindaheng98.top/%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E7%90%83%E8%B0%90%E7%B3%BB%E6%95%B0.html#%E5%9F%BA%E5%87%BD%E6%95%B0">http://www.yindaheng98.top/%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E7%90%83%E8%B0%90%E7%B3%BB%E6%95%B0.html#%E5%9F%BA%E5%87%BD%E6%95%B0</a></li></ul>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>记录一些nerf，3dgs的前置知识及讲解的博客和视频</p></blockquote><p>知乎收藏夹：</p><ul><li><a href="https://www.zhihu.com/collection/949437601">https://www.zhihu.com/collection/949437601</a></li></ul><p>nerf 解读：</p><ul><li>原理：<a href="https://zhuanlan.zhihu.com/p/481275794">https://zhuanlan.zhihu.com/p/481275794</a></li><li>代码：<a href="https://zhuanlan.zhihu.com/p/482154458">https://zhuanlan.zhihu.com/p/482154458</a></li><li>相机参数与坐标系变换：<a href="https://zhuanlan.zhihu.com/p/593204605/">https://zhuanlan.zhihu.com/p/593204605/</a></li></ul><p>球协函数：</p><ul><li><a href="http://www.yindaheng98.top/%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E7%90%83%E8%B0%90%E7%B3%BB%E6%95%B0.html#%E5%9F%BA%E5%87%BD%E6%95%B0">http://www.yindaheng98.top/%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E7%90%83%E8%B0%90%E7%B3%BB%E6%95%B0.html#%E5%9F%BA%E5%87%BD%E6%95%B0</a></li></ul>]]></content>
       
       
       <categories>
           
-          <category> nerf </category>
-          
-          <category> 3dgs </category>
+          <category> 3DV </category>
           
       </categories>
       
@@ -96,10 +117,6 @@
           
           <category> pytorch </category>
           
-          <category> python </category>
-          
-          <category> numpy </category>
-          
       </categories>
       
       
@@ -126,6 +143,8 @@
       
       
       <categories>
+          
+          <category> 3DV </category>
           
           <category> NeRF </category>
           

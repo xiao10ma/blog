@@ -6,7 +6,7 @@
   <link href="https://xiao10ma.github.io/atom.xml" rel="self"/>
   
   <link href="https://xiao10ma.github.io/"/>
-  <updated>2024-09-02T09:36:16.002Z</updated>
+  <updated>2024-10-02T05:53:37.385Z</updated>
   <id>https://xiao10ma.github.io/</id>
   
   <author>
@@ -17,13 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Diffusion Model</title>
+    <link href="https://xiao10ma.github.io/2024/10/02/Diffusion_Model/"/>
+    <id>https://xiao10ma.github.io/2024/10/02/Diffusion_Model/</id>
+    <published>2024-10-01T16:00:00.000Z</published>
+    <updated>2024-10-02T05:53:37.385Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Diffusion-Model"><a href="#Diffusion-Model" class="headerlink" title="Diffusion Model"></a>Diffusion Model</h1><blockquote><p>扩散现象是指物质粒子从高浓度区域向低浓度区域移动的过程，如往水中滴入墨水。DDPM受到启发，将前向加噪也看成是扩散过程，逐步将有意义的原图像完全变成无意义的噪声。</p></blockquote><h2 id="前向加噪"><a href="#前向加噪" class="headerlink" title="前向加噪"></a>前向加噪</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Diffusion-Model&quot;&gt;&lt;a href=&quot;#Diffusion-Model&quot; class=&quot;headerlink&quot; title=&quot;Diffusion Model&quot;&gt;&lt;/a&gt;Diffusion Model&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;扩散现象是</summary>
+      
+    
+    
+    
+    <category term="AIGC" scheme="https://xiao10ma.github.io/categories/AIGC/"/>
+    
+    <category term="DDPM" scheme="https://xiao10ma.github.io/categories/AIGC/DDPM/"/>
+    
+    
+    <category term="AIGC" scheme="https://xiao10ma.github.io/tags/AIGC/"/>
+    
+    <category term="DDPM" scheme="https://xiao10ma.github.io/tags/DDPM/"/>
+    
+  </entry>
+  
+  <entry>
     <title>服务器搭建</title>
     <link href="https://xiao10ma.github.io/2024/09/02/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/"/>
     <id>https://xiao10ma.github.io/2024/09/02/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/</id>
     <published>2024-09-01T16:00:00.000Z</published>
-    <updated>2024-09-02T09:36:16.002Z</updated>
+    <updated>2024-10-02T05:54:43.221Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>本人记忆着实一般，这几天新得了几台服务器的权限，要记录下来，怎么开坑，方便自己遇到此类问题。寻来方便。。</p><p><del>毕竟，前一天刚开一个服务器；第二天就忘了具体咋操作了</del></p></blockquote><p>本人是做deep learning的，故本文仅仅适合DL的同学来看，其余不是很确定？？？</p><ol><li><p>在/home/mazipei/目录下，下载miniconda/anaconda（看个人喜好，mini够用）</p><ul><li>下载 Miniconda (Python3 version)</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</span><br></pre></td></tr></table></figure><ul><li>安装</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash Miniconda3-latest-Linux-x86_64.sh</span><br></pre></td></tr></table></figure><ul><li>随后一直按回车，所有都yes<br>安装好后，<code>source ~/.bashrc</code></li></ul></li><li><p>设置清华源</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install --upgrade pip</span><br><span class="line">pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple</span><br></pre></td></tr></table></figure></li><li>找一个github repo下一个你要用的 conda 环境，我目前在做 4d edit，找了 <a href="https://github.com/Friedrich-M/Instruct-4D-to-4D#environmental-setups">Instruct4D-to-4D</a><ul><li>创建一个环境：<code>conda create -n instruct4d python=3.8</code></li><li>查看当前服务器装了什么版本的cuda，（一般师兄都会帮你装好）<ul><li><code>cat /usr/local/cuda/version.json</code><ul><li>安装torch：<code>pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 --index-url https://download.pytorch.org/whl/cu118</code></li><li>安装当前repo需要的其他库：<code>pip install -r requirements.txt</code></li></ul></li></ul></li></ul></li></ol>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>本人记忆着实一般，这几天新得了几台服务器的权限，要记录下来，怎么开坑，方便自己遇到此类问题。寻来方便。。</p><p><del>毕竟，前一天刚开一个服务器；第二天就忘了具体咋操作了</del></p></blockquote><p>本人是做deep learning的，故本文仅仅适合DL的同学来看，其余不是很确定？？？</p><ol><li><p>在/home/mazipei/目录下，下载miniconda/anaconda（看个人喜好，mini够用）</p><ul><li>下载 Miniconda (Python3 version)</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</span><br></pre></td></tr></table></figure><ul><li>安装</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash Miniconda3-latest-Linux-x86_64.sh</span><br></pre></td></tr></table></figure><ul><li>随后一直按回车，所有都yes<br>安装好后，<code>source ~/.bashrc</code></li></ul></li><li><p>设置清华源</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install --upgrade pip</span><br><span class="line">pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple</span><br></pre></td></tr></table></figure></li><li><p>找一个github repo下一个你要用的 conda 环境，我目前在做 4d edit，找了 <a href="https://github.com/Friedrich-M/Instruct-4D-to-4D#environmental-setups">Instruct4D-to-4D</a></p><ul><li>创建一个环境：<code>conda create -n instruct4d python=3.8</code></li><li>查看当前服务器装了什么版本的cuda，（一般师兄都会帮你装好）<ul><li><code>cat /usr/local/cuda/version.json</code></li></ul></li><li>安装torch：<code>pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 --index-url https://download.pytorch.org/whl/cu118</code></li><li>安装当前repo需要的其他库：<code>pip install -r requirements.txt</code></li></ul></li></ol>]]></content>
     
     
       
@@ -39,10 +68,6 @@
     
     <category term="server" scheme="https://xiao10ma.github.io/categories/server/"/>
     
-    <category term="conda" scheme="https://xiao10ma.github.io/categories/server/conda/"/>
-    
-    <category term="python" scheme="https://xiao10ma.github.io/categories/server/conda/python/"/>
-    
     
   </entry>
   
@@ -51,7 +76,7 @@
     <link href="https://xiao10ma.github.io/2024/08/01/%E6%95%B0%E5%AD%A6/"/>
     <id>https://xiao10ma.github.io/2024/08/01/%E6%95%B0%E5%AD%A6/</id>
     <published>2024-07-31T16:00:00.000Z</published>
-    <updated>2024-08-01T02:01:24.633Z</updated>
+    <updated>2024-10-02T05:54:50.671Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>记录一些数学知识，方便以后忘记时回来</p></blockquote><p><a href="http://www.yindaheng98.top/%E6%95%B0%E5%AD%A6/SVD.html#%E5%90%84%E7%A7%8D%E7%9F%A9%E9%98%B5%E5%88%86%E8%A7%A3">SVD</a>：主要用途，解欠定、超定方程</p>]]></content>
     
@@ -68,8 +93,6 @@
     
     <category term="math" scheme="https://xiao10ma.github.io/categories/math/"/>
     
-    <category term="linear algebra" scheme="https://xiao10ma.github.io/categories/math/linear-algebra/"/>
-    
     
     <category term="math" scheme="https://xiao10ma.github.io/tags/math/"/>
     
@@ -82,26 +105,24 @@
     <link href="https://xiao10ma.github.io/2024/04/19/nerf_3dgs%E5%8D%9A%E5%AE%A2%E6%94%B6%E8%97%8F%E5%A4%B9/"/>
     <id>https://xiao10ma.github.io/2024/04/19/nerf_3dgs%E5%8D%9A%E5%AE%A2%E6%94%B6%E8%97%8F%E5%A4%B9/</id>
     <published>2024-04-18T16:00:00.000Z</published>
-    <updated>2024-04-19T07:03:41.733Z</updated>
+    <updated>2024-10-02T05:55:10.792Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p> 记录一些nerf，3dgs的前置知识及讲解的博客和视频</p></blockquote><p>知乎收藏夹：</p><ul><li><a href="https://www.zhihu.com/collection/949437601">https://www.zhihu.com/collection/949437601</a></li></ul><p>nerf 解读：</p><ul><li>原理：<a href="https://zhuanlan.zhihu.com/p/481275794">https://zhuanlan.zhihu.com/p/481275794</a></li><li>代码：<a href="https://zhuanlan.zhihu.com/p/482154458">https://zhuanlan.zhihu.com/p/482154458</a></li><li>相机参数与坐标系变换：<a href="https://zhuanlan.zhihu.com/p/593204605/">https://zhuanlan.zhihu.com/p/593204605/</a></li></ul><p>球协函数：</p><ul><li><a href="http://www.yindaheng98.top/%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E7%90%83%E8%B0%90%E7%B3%BB%E6%95%B0.html#%E5%9F%BA%E5%87%BD%E6%95%B0">http://www.yindaheng98.top/%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E7%90%83%E8%B0%90%E7%B3%BB%E6%95%B0.html#%E5%9F%BA%E5%87%BD%E6%95%B0</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>记录一些nerf，3dgs的前置知识及讲解的博客和视频</p></blockquote><p>知乎收藏夹：</p><ul><li><a href="https://www.zhihu.com/collection/949437601">https://www.zhihu.com/collection/949437601</a></li></ul><p>nerf 解读：</p><ul><li>原理：<a href="https://zhuanlan.zhihu.com/p/481275794">https://zhuanlan.zhihu.com/p/481275794</a></li><li>代码：<a href="https://zhuanlan.zhihu.com/p/482154458">https://zhuanlan.zhihu.com/p/482154458</a></li><li>相机参数与坐标系变换：<a href="https://zhuanlan.zhihu.com/p/593204605/">https://zhuanlan.zhihu.com/p/593204605/</a></li></ul><p>球协函数：</p><ul><li><a href="http://www.yindaheng98.top/%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E7%90%83%E8%B0%90%E7%B3%BB%E6%95%B0.html#%E5%9F%BA%E5%87%BD%E6%95%B0">http://www.yindaheng98.top/%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E7%90%83%E8%B0%90%E7%B3%BB%E6%95%B0.html#%E5%9F%BA%E5%87%BD%E6%95%B0</a></li></ul>]]></content>
     
     
       
       
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt; 记录一些nerf，3dgs的前置知识及讲解的博客和视频&lt;/p&gt;
+&lt;p&gt;记录一些nerf，3dgs的前置知识及讲解的博客和视频&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;知乎收藏夹：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.zhihu.com/collection/949437601&quot;&gt;h</summary>
+&lt;li&gt;&lt;a href=&quot;https://www.zhihu.com/collection/949437601&quot;&gt;ht</summary>
       
     
     
     
-    <category term="nerf" scheme="https://xiao10ma.github.io/categories/nerf/"/>
-    
-    <category term="3dgs" scheme="https://xiao10ma.github.io/categories/nerf/3dgs/"/>
+    <category term="3DV" scheme="https://xiao10ma.github.io/categories/3DV/"/>
     
     
     <category term="nerf" scheme="https://xiao10ma.github.io/tags/nerf/"/>
@@ -115,7 +136,7 @@
     <link href="https://xiao10ma.github.io/2024/03/29/pytorch%E5%8D%9A%E5%AE%A2%E6%94%B6%E8%97%8F%E5%A4%B9/"/>
     <id>https://xiao10ma.github.io/2024/03/29/pytorch%E5%8D%9A%E5%AE%A2%E6%94%B6%E8%97%8F%E5%A4%B9/</id>
     <published>2024-03-28T16:00:00.000Z</published>
-    <updated>2024-09-02T01:49:53.737Z</updated>
+    <updated>2024-10-02T05:55:22.051Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>记录一些在看代码时遇到的一些问题及博客，方便以后忘记时回来</p></blockquote><p>知乎收藏夹：</p><ul><li><a href="https://www.zhihu.com/collection/947243718">https://www.zhihu.com/collection/947243718</a></li></ul><p>csdn收藏夹：</p><ul><li><a href="https://i.csdn.net/#/user-center/collection-list?type=1&amp;folder=36818606&amp;key=1">https://i.csdn.net/#/user-center/collection-list?type=1&amp;folder=36818606&amp;key=1</a></li></ul><p>模型save and load:</p><ul><li><a href="https://www.cnblogs.com/Zhuohome/p/15599792.html">https://www.cnblogs.com/Zhuohome/p/15599792.html</a></li></ul><p>命令行参数：</p><ul><li><a href="https://www.bilibili.com/video/BV1U4411j7xb/?spm_id_from=333.337.search-card.all.click&amp;vd_source=738644d63e97553d6e3dc1cd66a642d6">https://www.bilibili.com/video/BV1U4411j7xb/?spm_id_from=333.337.search-card.all.click&amp;vd_source=738644d63e97553d6e3dc1cd66a642d6</a></li></ul><p>cuda版本：</p><ul><li><a href="https://cloud.tencent.com/developer/article/1731440">https://cloud.tencent.com/developer/article/1731440</a></li></ul><p>Python装饰器：</p><ul><li><a href="https://foofish.net/python-decorator.html">https://foofish.net/python-decorator.html</a></li></ul><p>Thread:</p><ul><li><a href="https://blog.csdn.net/briblue/article/details/85101144">https://blog.csdn.net/briblue/article/details/85101144</a></li></ul><p>argparse:</p><ul><li><a href="https://www.cnblogs.com/sch01ar/p/8433119.html">https://www.cnblogs.com/sch01ar/p/8433119.html</a></li></ul><p>Numpy 切片：</p><p>From ChatGPT:</p><p>在 <code>Pi[:, [1, 2, 0]]</code> 中，方括号 <code>[]</code> 表示一个数组（或列表），其元素是要选择的列的索引。这是 NumPy 中常用的一种高级索引方法，允许你指定想要选择的多个列或行，并按照你指定的顺序进行排列。</p><h3 id="高级索引的解释"><a href="#高级索引的解释" class="headerlink" title="高级索引的解释"></a>高级索引的解释</h3><p>在 NumPy 中，有两种索引方式：<strong>基本索引</strong>和<strong>高级索引</strong>。基本索引类似于 Python 的切片操作，如 <code>Pi[:, 1]</code>，选择所有行的第1列。高级索引则更为灵活，它允许使用数组（或列表）来指定索引的集合，并且可以改变元素的顺序。</p><p>具体来说：</p><ul><li><code>Pi[:, 1]</code> 会选择数组 <code>Pi</code> 的所有行的第1列，返回一个一维数组。</li><li><code>Pi[:, [1, 2]]</code> 会选择数组 <code>Pi</code> 的所有行的第1列和第2列，返回一个二维数组，其中包含这两列的数据。</li><li><code>Pi[:, [1, 2, 0]]</code> 不仅选择了特定的列，还按照 <code>1, 2, 0</code> 的顺序重新排列这些列。这个列表 <code>[1, 2, 0]</code> 指定了新的列顺序。</li></ul><h3 id="举例说明"><a href="#举例说明" class="headerlink" title="举例说明"></a>举例说明</h3><p>假设你有一个二维数组：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">array = np.array([</span><br><span class="line">    [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>],</span><br><span class="line">    [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>],</span><br><span class="line">    [<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line">])</span><br></pre></td></tr></table></figure><p>使用 <code>array[:, [2, 0, 1]]</code>，我们期望得到一个新的数组，其中列的顺序重新排列为 <code>[2, 0, 1]</code>，即：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">array[:, [<span class="number">2</span>, <span class="number">0</span>, <span class="number">1</span>]]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出:</span></span><br><span class="line">array([</span><br><span class="line">    [<span class="number">3</span>, <span class="number">1</span>, <span class="number">2</span>],</span><br><span class="line">    [<span class="number">6</span>, <span class="number">4</span>, <span class="number">5</span>],</span><br><span class="line">    [<span class="number">9</span>, <span class="number">7</span>, <span class="number">8</span>]</span><br><span class="line">])</span><br></pre></td></tr></table></figure><p>在这个操作中：</p><ul><li><code>2</code> 表示选择原数组的第2列（第三列）。</li><li><code>0</code> 表示选择原数组的第0列（第一列）。</li><li><code>1</code> 表示选择原数组的第1列（第二列）。</li></ul><p>最终生成的数组 <code>array[:, [2, 0, 1]]</code> 的列顺序就变成了 <code>[3, 1, 2]</code>，<code>[6, 4, 5]</code>，和 <code>[9, 7, 8]</code>。</p><p>通过这种方式，你可以非常灵活地选择和重新排列数组中的行或列。</p>]]></content>
     
@@ -134,10 +155,6 @@
     
     <category term="pytorch" scheme="https://xiao10ma.github.io/categories/pytorch/"/>
     
-    <category term="python" scheme="https://xiao10ma.github.io/categories/pytorch/python/"/>
-    
-    <category term="numpy" scheme="https://xiao10ma.github.io/categories/pytorch/python/numpy/"/>
-    
     
     <category term="pytorch" scheme="https://xiao10ma.github.io/tags/pytorch/"/>
     
@@ -152,7 +169,7 @@
     <link href="https://xiao10ma.github.io/2023/11/16/%E5%9B%BE%E5%BD%A2%E5%AD%A6/nerfreport/"/>
     <id>https://xiao10ma.github.io/2023/11/16/%E5%9B%BE%E5%BD%A2%E5%AD%A6/nerfreport/</id>
     <published>2023-11-15T16:00:00.000Z</published>
-    <updated>2024-05-29T12:54:40.252Z</updated>
+    <updated>2024-10-02T05:54:29.061Z</updated>
     
     <content type="html"><![CDATA[<h1 id="NeRF-笔记"><a href="#NeRF-笔记" class="headerlink" title="NeRF 笔记"></a>NeRF 笔记</h1><blockquote><p>写在前面<br>这原是我图形学课上论文阅读的一个作业，现放在自己博客里面，也当是我学习NeRF的一个小结。</p></blockquote><h2 id="NeRF"><a href="#NeRF" class="headerlink" title="NeRF"></a>NeRF</h2><h3 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h3><p>NeRF提出了一种通过使用输入视图的稀疏集来优化底层连续体积场景函数，进而实现复杂场景的新视图合成的最先进的结果的方法。使用全连接（非卷积）深度网络，输入有五个维度（空间坐标$(x,y,z)$，视角方向$(\theta,\phi)$），输出是该空间位置的体积密度$\sigma$和视角相关的color。再通过传统的体渲染技术得到最后的像素值。通过比较生成图像和ground truth作为loss，来训练神经网络。</p><h3 id="NeRF的意义是什么？"><a href="#NeRF的意义是什么？" class="headerlink" title="NeRF的意义是什么？"></a>NeRF的意义是什么？</h3><p>经典的图形学渲染流程中，我们是通过对输入的图像进行三维建模，再去进行自由视角的渲染。这就要求构建出非常高质量的三维模型才能渲染出精细的结果。但是很多情况下，三维模型的构建是比较困难的。但是NeRF基于深度学习的流程，通过对三维场景的神经表达，结合可微分渲染，可以实现端到端的训练。最终可以实现在任意视角下对模型的渲染。</p><h3 id="NeRF的基本原理"><a href="#NeRF的基本原理" class="headerlink" title="NeRF的基本原理"></a>NeRF的基本原理</h3><p>NeRF的流程基本上可以用这幅图概括：<br><img src="https://xiao10ma.github.io/images/NeRF/image.png" alt="经典 NeRF 流程图"></p><ol><li><p>沿着相机光线，采样5D坐标合成图像 (位置和观看方向)</p><p>通过$r(t) = o + td$确定光线，沿着该光线得到采样点，$r_i=r(t_i)$</p></li><li><p>将这些输入MLP以产生颜色和体积密度</p><p>将采样点的三维坐标$(x, y, z)$和相机的视角$(\theta, \phi)$作为输入，得到$\sigma$和RGB值。</p></li><li><p>使用传统体渲染技术将这些值计算为最终的RGB值</p><p>$\begin{aligned} \hat{C}(\mathbf{r}) &amp; =\sum_{i=1}^N T_i\left(1-\exp \left(-\sigma_i \delta_i\right)\right) \mathbf{c}_i, \\ T_i &amp; =\exp \left(-\sum_{j=1}^{i-1} \sigma_j \delta_j\right)\end{aligned}$</p></li><li><p>通过最小化合成图像和真实图像之间的loss来优化我们的场景表示</p><p>$\mathcal{L}=\sum_{\mathbf{r} \in \mathcal{R}}|\hat{C}(\mathbf{r})-C(\mathbf{r})|_2^2$</p></li></ol><h3 id="NeRF的一些优化"><a href="#NeRF的一些优化" class="headerlink" title="NeRF的一些优化"></a>NeRF的一些优化</h3><ol><li><p>位置编码</p><p>尽管神经网络是通用的函数近似器, 但作者发现, 让网络 $F \Theta$ 直接操作 $x y z \theta \varphi$ 输入坐标会导致渲染在表示颜色和几何形状方面的高频变化方面表现不佳。这与Rahaman最近的工作是一致的,这表明深度网络偏向于学习低频函数。他们还表明, 在将输入传递给网络之前, 使用高频函数将输入映射到更高维度的空间, 可以更好地拟合包含高频变化的数据。</p></li><li><p>View Dependence</p><p>这是基础图形学中的知识，高光依赖于视角的方向。</p></li><li><p>分层采样</p><p>利用第一次采样点预测的密度值确定第二次采样点的位置，可以减少计算的开销，同时也需要改变下体渲染公式<br>$\mathcal{L}=\sum_{\mathbf{r} \in \mathcal{R}}\left[\left|\hat{C}_c(\mathbf{r})-C(\mathbf{r})\right|_2^2+\left|\hat{C}_f(\mathbf{r})-C(\mathbf{r})\right|_2^2\right]$</p></li></ol><p>以上1，2点的举例：<br><img src="https://xiao10ma.github.io/images/NeRF/image-1.png" alt=""></p><h3 id="NeRF的局限性"><a href="#NeRF的局限性" class="headerlink" title="NeRF的局限性"></a>NeRF的局限性</h3><ol><li>最初时的NeRF计算效率比较低，训练时间长。目前，有一些模型的改善，包括instant-ngp（哈希编码）,3D Gaussian Splatting（高斯核）。目前，3D Gaussian Splatting的效果很不错，对毛发的重建很逼真！！</li><li>无法进行泛化，一个神经网络只适用于一个模型。要是想再重建模型，只能重新训练。</li><li>无法重建动态的场景</li></ol><h2 id="HumanNeRF"><a href="#HumanNeRF" class="headerlink" title="HumanNeRF"></a>HumanNeRF</h2><h3 id="Abstract-1"><a href="#Abstract-1" class="headerlink" title="Abstract"></a>Abstract</h3><p>作者介绍了一种名为“HumanNeRF”的自由视点渲染方法。这种方法可以应用于单目摄像头拍摄的视频，例如YouTube上的视频，其中人物进行复杂的身体动作。其核心功能是允许在视频的任何一帧暂停，然后从任意新的摄像机视角渲染主体，甚至可以为那个特定的帧和身体姿势创建一个完整的360度摄像机路径。</p><p>这项任务特别具有挑战性，因为它需要合成从各种可能在输入视频中不存在的摄像机角度看到的身体的逼真细节，以及合成如衣服褶皱和面部外观等细微之处。</p><p>该方法通过优化人物在规范的T型姿势中的体积表示，以及与之配合的运动场，将估计的规范表示映射到视频的每一帧，通过后向扭曲实现。运动场被分解为骨骼的刚性运动和非刚性运动，这些运动由深度网络产生。</p><p>研究表明，与之前的工作相比，这种方法在性能上有显著的提升，并且在未受控制的捕捉场景中，展示了从单目视频中移动人物的自由视点渲染的引人入胜的例子。</p><h3 id="HumanNeRF的基本原理"><a href="#HumanNeRF的基本原理" class="headerlink" title="HumanNeRF的基本原理"></a>HumanNeRF的基本原理</h3><p>HumanNeRF的流程基本上可以用这幅图还有一个公式概括：<br><img src="https://xiao10ma.github.io/images/NeRF/image-2.png" alt=""></p><blockquote><p>We represent a moving person with a canonical appearance volume $F_c$ warped to an observed pose to produce output appearance volume $F_o$ :</p><script type="math/tex; mode=display">F_o(\mathbf{x}, \mathbf{p})=F_c(T(\mathbf{x}, \mathbf{p})),</script><p>where $F_c: \mathbf{x} \rightarrow(\mathbf{c}, \sigma)$ maps position $\mathbf{x}$ to color $\mathbf{c}$ and density $\sigma$, and $T:\left(\mathbf{x}_o, \mathbf{p}\right) \rightarrow \mathbf{x}_c$ defines a motion field mapping points from observed space back to canonical space, guided by observed pose $\mathbf{p}=(J, \Omega)$, where $J$ includes $K$ standard 3D joint locations, and $\Omega=\left\{\boldsymbol{\omega}_i\right\}$ are local joint rotations represented as axis-angle vectors $\boldsymbol{\omega}_i$.</p></blockquote><p>我先来讲下这个公式</p><p>$T:\left(\mathbf{x}_o, \mathbf{p}\right) \rightarrow \mathbf{x}_c$这个函数将observation space（观察空间）的点和当前估计的人体pose，映射回canonical space（标准空间）的点。函数$F_c$以标准空间的点作为输入，输出color和$\sigma$。可以看到，这里其实是和传统的NeRF不同的。正如我上面所说，传统的NeRF是有5维的输入，而HumanNeRF却少了$(\theta, \phi)$。这也正是HumanNeRF的一个缺陷，即只能考虑漫反射。</p><p>再来讲讲流程图</p><p>与NeRF一样，相机发出一条射线，再采样。但是作者这里思想非常巧妙。作者运用上面的公式，将观察空间中采样的点映射回标准空间中，从标准空间中采样。有几点好处：</p><ol><li><strong>姿态不变性</strong>：通过将观察空间中的点映射到标准空间，可以将人体的不同姿态统一到一个标准化的参考姿态。这样做有助于模型更好地学习和理解人体的三维结构，而不是专注于特定的姿态或视角。</li><li><strong>数据一致性</strong>：在标准空间中处理数据可以确保不同图像或观察中的相同身体部位被一致地表示，这对于训练神经网络来说是非常重要的。这种一致性有助于网络更有效地学习和泛化。</li><li><strong>简化学习任务</strong>：将复杂的人体动态映射到一个静态的、标准化的空间，可以简化学习任务。网络不需要同时处理人体的动态变化和外观变化，而是可以专注于从标准化的视角学习人体的外观。</li><li><strong>更好的泛化能力</strong>：通过这种映射，模型可以更好地泛化到新的姿态和视角，因为它学习的是从标准化姿态到实际观察姿态的映射。这对于实际应用中的灵活性和鲁棒性是非常重要的。</li><li><strong>高效的渲染</strong>：在标准空间中进行渲染计算可以提高效率，因为可以重用对于不同观察视角相同的计算结果，而不是针对每个新视角重新计算整个场景。</li></ol><p>observation space的点映射到标准空间，作者将$T(x,p)$拆分成两部分：$T(\mathbf{x}, \mathbf{p})=T_{\text {skel }}(\mathbf{x}, \mathbf{p})+T_{\mathrm{NR}}\left(T_{\text {skel }}(\mathbf{x}, \mathbf{p}), \mathbf{p}\right)$。即骨骼和非骨骼两部分。骨骼的部分，正如其名，即为骨骼的映射。非骨骼部分，包括毛发、衣服，这些柔软的材料。</p><p>$T_{\text {skel }}(\mathbf{x}, \mathbf{p})=\sum_{i=1}^K w_o^i(\mathbf{x})\left(R_i \mathbf{x}+\mathbf{t}_i\right)$<br>刚体骨骼这里通过逆LBS实现，LBS具体实现可以参照games105(Lecture7)。逆即为从T-pose到observation pose。</p><p>$T_{\mathrm{NR}}(\mathbf{x}, \mathbf{p})=\operatorname{MLP}_{\theta_{\mathrm{NR}}}(\gamma(\mathbf{x}) ; \Omega)$<br>非骨骼这里通过MLP预测。</p><p>综上所述，HumanNeRF就是从单目摄像头出发，射出光线。在光线中采用，将采样点映射到标准空间中的点。再把标准空间的点输入神经网络，得到其$\sigma$和RGB。最后用体渲染的方式得到最后的像素值。</p><h3 id="自己跑的一些结果"><a href="#自己跑的一些结果" class="headerlink" title="自己跑的一些结果"></a>自己跑的一些结果</h3><p><img src="https://xiao10ma.github.io/images/NeRF/000026.png" alt=""><br><img src="https://xiao10ma.github.io/images/NeRF/000056.png" alt=""><br><img src="https://xiao10ma.github.io/images/NeRF/000083.png" alt=""></p><h3 id="HumanNeRF的局限性"><a href="#HumanNeRF的局限性" class="headerlink" title="HumanNeRF的局限性"></a>HumanNeRF的局限性</h3><p>HumanNeRF对于novel pose不能泛化，其原因是HumanNeRF将Observation space 映射到 canonical space 过拟合了。MonoHuman修正了这个问题。<br>HumanNeRF可能会产生类似于米其林轮胎人的效果（应用新的人体pose）：<br><img src="https://xiao10ma.github.io/images/NeRF/000047.png" alt=""></p><h2 id="MonoHuman"><a href="#MonoHuman" class="headerlink" title="MonoHuman"></a>MonoHuman</h2><blockquote><p>由于变形场是两个不同的多层感知器（MLP），并且依赖于帧或姿态，它们仍然面临过拟合问题。受上述工作的启发，我们设计了我们的共享双向变形模块，使用定义在规范空间中的相同运动权重进行前向和后向变形。</p></blockquote><p>MonoHuman主要的实现，引入$\mathbf{L}_{\text {consis }}$:</p><p>In order to add the constraint that only related to the deformation field as a regularization, we use the intuition of consistency of forward and backward deformation, the consistent loss $\mathbf{L}_{\text {consis }}$ is computed as:</p><script type="math/tex; mode=display">L_{\text {consis }}=\left\{\begin{array}{ll}d & \text { if } d \geq \theta \\0 & \text { else }\end{array} d=L_2\left(\mathbf{x}_{\mathbf{o}}, D_f\left(D_b\left(\mathbf{x}_{\mathbf{o}}, \mathbf{p}\right), \mathbf{p}\right)\right),\right.</script><p>where $L_2$ means the $L_2$ distance calculation, and it only penalize the points whose $L_2$ distance is greater than threshold $\theta$ we set to avoid over regularization.</p><ol><li><strong>前向和后向变形的一致性直觉</strong>：这意味着变形应该是可逆的。例如，如果你首先应用一个变形，然后应用其逆变形，理论上你应该回到原始状态。</li><li><p><strong>一致性损失 $\mathbf{L}_{\text {consis }}$</strong>：这是一个用来衡量变形前后一致性的损失函数。它的计算方式如下：</p><p>$L_{\text {consis }}=\left\{\begin{array}{ll}d &amp; \text { if } d \geq \theta \\ 0 &amp; \text { else }\end{array} d=L_2\left(\mathbf{x}_{\mathbf{o}}, D_f\left(D_b\left(\mathbf{x}_{\mathbf{o}}, \mathbf{p}\right), \mathbf{p}\right)\right)\right.$</p><p>其中 d 是通过以下方式计算的：</p><p>$d=L_2\left(\mathbf{x}_{\mathbf{o}}, D_f\left(D_b\left(\mathbf{x}_{\mathbf{o}}, \mathbf{p}\right), \mathbf{p}\right)\right)$</p><p>这里，$x_o$ 表示原始点，$D_f$ 和 $D_b$ 分别表示前向和后向变形函数，$p$ 表示相关参数。</p></li><li><strong>$L_2$距离计算</strong>：这是一种计算两点之间距离的方法。在这个上下文中，它用于计算变形前后点的距离。</li><li><strong>阈值$\theta$</strong>：这是一个设定的阈值，用于决定何时对点进行惩罚。如果点的$L_2$距离大于这个阈值，它将被纳入损失计算中；如果小于这个阈值，则不会。这样做的目的是为了避免过度正则化，即只对那些变形效果不佳的点施加惩罚。</li></ol><p>这是作者的一个结果，但是我运行的结果一般般，甚至感觉不如HumanNeRF</p><p><img src="https://xiao10ma.github.io/images/NeRF/backflip.gif" alt=""></p><p>我的复现结果:</p><p>mesh:</p><div align = "center">    <img src="https://xiao10ma.github.io/images/NeRF/monohumanmesh.png"width="400"></div><p>重建结果：</p><div align = "center">    <img src="https://xiao10ma.github.io/images/NeRF/monohuman.png"width="400"></div><p><a href="https://github.com/Yzmblog/MonoHuman">MonoHuman GitHub链接</a></p>]]></content>
     
@@ -165,7 +182,9 @@
     
     
     
-    <category term="NeRF" scheme="https://xiao10ma.github.io/categories/NeRF/"/>
+    <category term="3DV" scheme="https://xiao10ma.github.io/categories/3DV/"/>
+    
+    <category term="NeRF" scheme="https://xiao10ma.github.io/categories/3DV/NeRF/"/>
     
     
     <category term="NeRF" scheme="https://xiao10ma.github.io/tags/NeRF/"/>
