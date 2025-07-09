@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://xiao10ma.github.io/2025/07/08/AI%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</loc>
+    
+    <lastmod>2025-07-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://xiao10ma.github.io/2025/03/18/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/</loc>
     
     <lastmod>2025-06-18</lastmod>
@@ -76,7 +85,7 @@
 
   <url>
     <loc>https://xiao10ma.github.io/</loc>
-    <lastmod>2025-06-26</lastmod>
+    <lastmod>2025-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -84,77 +93,77 @@
   
   <url>
     <loc>https://xiao10ma.github.io/tags/AIGC/</loc>
-    <lastmod>2025-06-26</lastmod>
+    <lastmod>2025-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/tags/DDPM/</loc>
-    <lastmod>2025-06-26</lastmod>
+    <lastmod>2025-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/tags/nerf/</loc>
-    <lastmod>2025-06-26</lastmod>
+    <lastmod>2025-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/tags/3dgs/</loc>
-    <lastmod>2025-06-26</lastmod>
+    <lastmod>2025-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/tags/pytorch/</loc>
-    <lastmod>2025-06-26</lastmod>
+    <lastmod>2025-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/tags/python/</loc>
-    <lastmod>2025-06-26</lastmod>
+    <lastmod>2025-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/tags/deep-learning/</loc>
-    <lastmod>2025-06-26</lastmod>
+    <lastmod>2025-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/tags/math/</loc>
-    <lastmod>2025-06-26</lastmod>
+    <lastmod>2025-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/tags/linear-algebra/</loc>
-    <lastmod>2025-06-26</lastmod>
+    <lastmod>2025-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/tags/NeRF/</loc>
-    <lastmod>2025-06-26</lastmod>
+    <lastmod>2025-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/tags/CG/</loc>
-    <lastmod>2025-06-26</lastmod>
+    <lastmod>2025-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -163,49 +172,49 @@
   
   <url>
     <loc>https://xiao10ma.github.io/categories/AIGC/</loc>
-    <lastmod>2025-06-26</lastmod>
+    <lastmod>2025-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/categories/3DV/</loc>
-    <lastmod>2025-06-26</lastmod>
+    <lastmod>2025-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/categories/pytorch/</loc>
-    <lastmod>2025-06-26</lastmod>
+    <lastmod>2025-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/categories/math/</loc>
-    <lastmod>2025-06-26</lastmod>
+    <lastmod>2025-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/categories/AIGC/DDPM/</loc>
-    <lastmod>2025-06-26</lastmod>
+    <lastmod>2025-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/categories/3DV/NeRF/</loc>
-    <lastmod>2025-06-26</lastmod>
+    <lastmod>2025-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiao10ma.github.io/categories/server/</loc>
-    <lastmod>2025-06-26</lastmod>
+    <lastmod>2025-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

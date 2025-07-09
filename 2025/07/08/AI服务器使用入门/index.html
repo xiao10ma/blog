@@ -1,0 +1,334 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>AI服务器极简入门 | MZP's blog</title><meta name="author" content="Ma Zipei"><meta name="copyright" content="Ma Zipei"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="本文将综合介绍AI科研服务器的一些工具的使用，供大家入门。 🐧 Linux 常用命令与基础知识为便于说明，以下示例中使用了通用占位符，如 {username}、{dirname} 等，表示你需要根据自己的实际情况进行替换。例如，如果你的用户名是 mazipei，则应将 {username} 替换为 mazipei。 为提升可读性，我会用花括号 {} 标注需要替换的内容，请根据实际情况进行修改。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI服务器极简入门">
+<meta property="og:url" content="https://xiao10ma.github.io/2025/07/08/AI%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/index.html">
+<meta property="og:site_name" content="MZP&#39;s blog">
+<meta property="og:description" content="本文将综合介绍AI科研服务器的一些工具的使用，供大家入门。 🐧 Linux 常用命令与基础知识为便于说明，以下示例中使用了通用占位符，如 {username}、{dirname} 等，表示你需要根据自己的实际情况进行替换。例如，如果你的用户名是 mazipei，则应将 {username} 替换为 mazipei。 为提升可读性，我会用花括号 {} 标注需要替换的内容，请根据实际情况进行修改。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://xiao10ma.github.io/img/avatar.jpg">
+<meta property="article:published_time" content="2025-07-07T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-07-09T02:03:34.538Z">
+<meta property="article:author" content="Ma Zipei">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xiao10ma.github.io/img/avatar.jpg"><link rel="shortcut icon" href="/blog/img/favicon.png"><link rel="canonical" href="https://xiao10ma.github.io/2025/07/08/AI%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/blog/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/blog/',
+  algolia: undefined,
+  localSearch: {"path":"/blog/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'AI服务器极简入门',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-07-09 10:03:34'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/blog/atom.xml" title="MZP's blog" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/blog/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/blog/archives/"><div class="headline">Articles</div><div class="length-num">7</div></a><a href="/blog/tags/"><div class="headline">Tags</div><div class="length-num">11</div></a><a href="/blog/categories/"><div class="headline">Categories</div><div class="length-num">7</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/blog/" title="MZP's blog"><span class="site-name">MZP's blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">AI服务器极简入门</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-07-07T16:00:00.000Z" title="Created 2025-07-08 00:00:00">2025-07-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-07-09T02:03:34.538Z" title="Updated 2025-07-09 10:03:34">2025-07-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/blog/categories/server/">server</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="AI服务器极简入门"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>本文将综合介绍AI科研服务器的一些工具的使用，供大家入门。</p>
+<h2 id="🐧-Linux-常用命令与基础知识"><a href="#🐧-Linux-常用命令与基础知识" class="headerlink" title="🐧 Linux 常用命令与基础知识"></a>🐧 Linux 常用命令与基础知识</h2><p>为便于说明，以下示例中使用了通用占位符，如 {username}、{dirname} 等，表示你需要根据自己的实际情况进行替换。例如，如果你的用户名是 mazipei，则应将 {username} 替换为 mazipei。</p>
+<p>为提升可读性，我会用花括号 {} 标注需要替换的内容，请根据实际情况进行修改。</p>
+<h3 id="🌐-一、远程登录"><a href="#🌐-一、远程登录" class="headerlink" title="🌐 一、远程登录"></a>🌐 一、远程登录</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh &#123;username&#125;@&#123;ip&#125;</span><br><span class="line"># example: ssh mazipei@10.10.10.10</span><br></pre></td></tr></table></figure>
+<p>如果没有设置过钥匙，第一次登陆时通常会有：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">❯ ssh mazipei@10.10.10.10</span><br><span class="line">no such identity: /Users/mazipei/.ssh/id_rsa: No such file or directory</span><br><span class="line">mazipei@10.28.5.13<span class="string">&#x27;s password:</span></span><br></pre></td></tr></table></figure>
+<p>输入密码即可</p>
+<h4 id="（可选）服务器免密登陆"><a href="#（可选）服务器免密登陆" class="headerlink" title="（可选）服务器免密登陆"></a>（可选）服务器免密登陆</h4><p>每次登录服务器都需要输入密码，比较麻烦。可以通过设置 SSH 密钥实现免密登录：</p>
+<ol>
+<li><p>在本地生成 SSH 密钥对</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C &#123;<span class="string">&quot;your_email@example.com&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># example: ssh-keygen -t rsa -b 4096 -C 123456@qq.com</span></span><br></pre></td></tr></table></figure>
+<p>回车后系统会提示你保存路径，默认是：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Users/&#123;username&#125;/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
+<p>可以直接回车使用默认路径，或者输入你自定义的路径。接着提示你设置密码，可以直接回车跳过。</p>
+<p>生成成功后，会看到两份文件：</p>
+<ul>
+<li>/Users/{username}/.ssh/id_rsa：私钥（不要泄露）</li>
+<li>/Users/{username}/.ssh/id_rsa.pub：公钥（可以共享给服务器）</li>
+</ul>
+</li>
+<li><p>将公钥上传到服务器<br>运行以下命令，把公钥追加到服务器的 <code>/Users/&#123;username&#125;/.ssh/authorized_keys</code> 文件中：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id &#123;username&#125;@&#123;ip&#125;</span><br></pre></td></tr></table></figure>
+<p> 如果你使用的是自定义密钥路径，可以加 <code>-i</code> 参数：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id -i &#123;your_path&#125;/id_rsa.pub &#123;username&#125;@&#123;ip&#125;</span><br></pre></td></tr></table></figure></li>
+<li>测试免密登录 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh &#123;username&#125;@&#123;ip&#125;</span><br></pre></td></tr></table></figure>
+ 如果不再提示输入密码，则说明配置成功。</li>
+</ol>
+<h5 id="🧠-附加技巧：多服务器共享一个-SSH-密钥"><a href="#🧠-附加技巧：多服务器共享一个-SSH-密钥" class="headerlink" title="🧠 附加技巧：多服务器共享一个 SSH 密钥"></a>🧠 附加技巧：多服务器共享一个 SSH 密钥</h5><p>如果你有多台服务器，其实无需为每台都生成不同的密钥。只要将同一个公钥添加到每台服务器的 <code>~/.ssh/authorized_keys</code> 中，即可通过 同一个私钥实现免密登录多个服务器。<br>为方便管理和免密登录，可以在本地的 ~/.ssh/config 文件中添加如下配置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ~/.ssh/config</span></span><br><span class="line"></span><br><span class="line">Host &#123;alias1&#125;</span><br><span class="line">    HostName &#123;ip_address1&#125;</span><br><span class="line">    User &#123;username1&#125;</span><br><span class="line">    IdentityFile &#123;private_key_path&#125;</span><br><span class="line"></span><br><span class="line">Host &#123;alias2&#125;</span><br><span class="line">    HostName &#123;ip_address2&#125;</span><br><span class="line">    User &#123;username2&#125;</span><br><span class="line">    IdentityFile &#123;private_key_path&#125;</span><br></pre></td></tr></table></figure><br>例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Host 3090</span><br><span class="line">    HostName 10.10.10.10</span><br><span class="line">    User mazipei</span><br><span class="line">    IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line">Host 4090</span><br><span class="line">    HostName 10.10.10.11</span><br><span class="line">    User zipeima</span><br><span class="line">    IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure></p>
+<h3 id="📁-二、文件与目录操作"><a href="#📁-二、文件与目录操作" class="headerlink" title="📁 二、文件与目录操作"></a>📁 二、文件与目录操作</h3><p>这一部分建议大家可以跟着一起在终端敲一遍。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查看当前路径</td>
+<td><code>pwd</code></td>
+<td>显示当前所在的目录（print working directory）</td>
+</tr>
+<tr>
+<td>列出文件</td>
+<td><code>ls</code></td>
+<td>列出当前目录下的文件和文件夹</td>
+</tr>
+<tr>
+<td>列出详细信息</td>
+<td><code>ls -l</code></td>
+<td>显示包含权限、大小、时间等信息的文件列表</td>
+</tr>
+<tr>
+<td>切换目录</td>
+<td><code>cd dirname/</code></td>
+<td>进入某个目录，比如 <code>cd data/</code> <br />👉 注意：这里的 <code>dirname</code> 是你服务器实际文件夹名字，不是固定写法</td>
+</tr>
+<tr>
+<td>返回上级目录</td>
+<td><code>cd ..</code></td>
+<td>返回到当前目录的上一级目录（父目录）</td>
+</tr>
+<tr>
+<td>当前目录</td>
+<td><code>.</code></td>
+<td>表示当前目录，常用于路径组合或执行脚本，例如 <code>./run.sh</code></td>
+</tr>
+<tr>
+<td>上级目录</td>
+<td><code>..</code></td>
+<td>表示当前目录的上一级，例如 <code>../data/</code> 表示父目录下的 <code>data</code> 文件夹</td>
+</tr>
+<tr>
+<td>创建目录</td>
+<td><code>mkdir new_folder/</code></td>
+<td>创建一个文件夹，名字可以自己起<br />👉 例如：<code>mkdir results</code></td>
+</tr>
+<tr>
+<td>删除文件</td>
+<td><code>rm file.txt</code></td>
+<td>删除文件（不可恢复）</td>
+</tr>
+<tr>
+<td>删除目录</td>
+<td><code>rm -r folder/</code></td>
+<td>递归删除目录及其内容</td>
+</tr>
+<tr>
+<td>复制文件</td>
+<td><code>cp a.txt b.txt</code></td>
+<td>将 <code>a.txt</code> 复制为 <code>b.txt</code></td>
+</tr>
+<tr>
+<td>移动/重命名</td>
+<td><code>mv a.txt b.txt</code></td>
+<td>改名或移动文件</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="🖥-二、服务器资源查看"><a href="#🖥-二、服务器资源查看" class="headerlink" title="🖥 二、服务器资源查看"></a>🖥 二、服务器资源查看</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查看显卡信息</td>
+<td><code>nvidia-smi</code>或 <code>nvitop</code></td>
+<td>查看 GPU 状态，强烈推荐使用 <code>nvitop</code>，下文将说明 <code>nvitop</code>的安装</td>
+</tr>
+<tr>
+<td>查看CPU信息</td>
+<td><code>top</code>或 <code>htop</code></td>
+<td>实时查看CPU/内存/进程占用</td>
+</tr>
+<tr>
+<td>查看硬盘空间</td>
+<td><code>df -h .</code></td>
+<td>查看各挂载点的磁盘使用</td>
+</tr>
+<tr>
+<td>查看当前路径下空间占用</td>
+<td><code>du -sh *</code></td>
+<td>各文件/文件夹大小（简洁）</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h3 id="🧼-三、实用技巧"><a href="#🧼-三、实用技巧" class="headerlink" title="🧼 三、实用技巧"></a>🧼 三、实用技巧</h3><ul>
+<li><code>Tab</code> 自动补全命令或文件名</li>
+<li><code>Ctrl + C</code> 强制终止当前运行的命令</li>
+</ul>
+<hr>
+<h3 id="（可选）服务器免密登陆-1"><a href="#（可选）服务器免密登陆-1" class="headerlink" title="（可选）服务器免密登陆"></a>（可选）服务器免密登陆</h3><p>一般而言，服务器有个人的用户目录和数据目录；用户目录为 <code>~</code>，主要放置一些配置文件；数据目录各个实验室服务器应该有所不同，具体可以询问实验室的同学。本文以 <code>HDD_DISK/users/mazipei</code>为例，设置为数据目录。</p>
+<h1 id="anaconda-miniconda-安装及配置"><a href="#anaconda-miniconda-安装及配置" class="headerlink" title="anaconda/miniconda 安装及配置"></a>anaconda/miniconda 安装及配置</h1><p>深度学习一般都需要安装 <code>torch</code>，这需要几个GB，因此建议将</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://xiao10ma.github.io">Ma Zipei</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://xiao10ma.github.io/2025/07/08/AI%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/">https://xiao10ma.github.io/2025/07/08/AI服务器使用入门/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/blog/img/avatar.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/blog/2025/03/18/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" title="服务器搭建"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next</div><div class="next_info">服务器搭建</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/blog/img/avatar.jpg" onerror="this.onerror=null;this.src='/blog/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Ma Zipei</div><div class="author-info__description">好好学习，天天向上</div></div><div class="card-info-data site-data is-center"><a href="/blog/archives/"><div class="headline">Articles</div><div class="length-num">7</div></a><a href="/blog/tags/"><div class="headline">Tags</div><div class="length-num">11</div></a><a href="/blog/categories/"><div class="headline">Categories</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xiao10ma"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%90%A7-Linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">1.</span> <span class="toc-text">🐧 Linux 常用命令与基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8C%90-%E4%B8%80%E3%80%81%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95"><span class="toc-number">1.1.</span> <span class="toc-text">🌐 一、远程登录</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86"><span class="toc-number">1.1.1.</span> <span class="toc-text">（可选）服务器免密登陆</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%F0%9F%A7%A0-%E9%99%84%E5%8A%A0%E6%8A%80%E5%B7%A7%EF%BC%9A%E5%A4%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%B1%E4%BA%AB%E4%B8%80%E4%B8%AA-SSH-%E5%AF%86%E9%92%A5"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">🧠 附加技巧：多服务器共享一个 SSH 密钥</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%81-%E4%BA%8C%E3%80%81%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C"><span class="toc-number">1.2.</span> <span class="toc-text">📁 二、文件与目录操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%96%A5-%E4%BA%8C%E3%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B5%84%E6%BA%90%E6%9F%A5%E7%9C%8B"><span class="toc-number">1.3.</span> <span class="toc-text">🖥 二、服务器资源查看</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%A7%BC-%E4%B8%89%E3%80%81%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7"><span class="toc-number">1.4.</span> <span class="toc-text">🧼 三、实用技巧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86-1"><span class="toc-number">1.5.</span> <span class="toc-text">（可选）服务器免密登陆</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#anaconda-miniconda-%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE"><span class="toc-number"></span> <span class="toc-text">anaconda&#x2F;miniconda 安装及配置</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/blog/2025/07/08/AI%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/" title="AI服务器极简入门">AI服务器极简入门</a><time datetime="2025-07-07T16:00:00.000Z" title="Created 2025-07-08 00:00:00">2025-07-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/blog/2025/03/18/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" title="服务器搭建">服务器搭建</a><time datetime="2025-03-17T16:00:00.000Z" title="Created 2025-03-18 00:00:00">2025-03-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/blog/2024/10/02/Diffusion_Model/" title="Diffusion Model">Diffusion Model</a><time datetime="2024-10-01T16:00:00.000Z" title="Created 2024-10-02 00:00:00">2024-10-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/blog/2024/08/01/%E6%95%B0%E5%AD%A6/" title="math博客收藏">math博客收藏</a><time datetime="2024-07-31T16:00:00.000Z" title="Created 2024-08-01 00:00:00">2024-08-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/blog/2024/04/19/nerf_3dgs%E5%8D%9A%E5%AE%A2%E6%94%B6%E8%97%8F%E5%A4%B9/" title="nerf_3dgs博客收藏">nerf_3dgs博客收藏</a><time datetime="2024-04-18T16:00:00.000Z" title="Created 2024-04-19 00:00:00">2024-04-19</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By Ma Zipei</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/blog/js/utils.js"></script><script src="/blog/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/blog/js/search/local-search.js"></script></div></div></body></html>
