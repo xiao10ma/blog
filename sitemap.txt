@@ -1,4 +1,3 @@
-https://xiao10ma.github.io/2025/07/08/AI%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/
 https://xiao10ma.github.io/2025/03/18/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/
 https://xiao10ma.github.io/2024/10/02/Diffusion_Model/
 https://xiao10ma.github.io/2024/03/29/pytorch%E5%8D%9A%E5%AE%A2%E6%94%B6%E8%97%8F%E5%A4%B9/
